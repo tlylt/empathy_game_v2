@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#01948e" />
+    <meta name="Description" content="Empathy game developed by Soristic" />
+    <link defer rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      defer
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <script defer src="game.js"></script>
+    <title>Empathy Game | Soristic</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- header bar -->
+      <div id="header" class="header hide">
+        <div id="time">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-alarm"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#2c3e50"
+            fill="#00abfb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="13" r="7" />
+            <polyline points="12 10 12 13 14 13" />
+            <line x1="7" y1="4" x2="4.25" y2="6" />
+            <line x1="17" y1="4" x2="19.75" y2="6" />
+          </svg>
+          <div id="time-meter"></div>
+        </div>
+        <div id="wealth">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-coin"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#2c3e50"
+            fill="#ffbf00"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="9" />
+            <path
+              d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1"
+            />
+            <path d="M12 6v2m0 8v2" />
+          </svg>
+          <div id="wealth-meter"></div>
+        </div>
+      </div>
+      <!-- end header bar -->
+      <!-- content -->
+      <div id="welcome" class="content">
+        <div class="text">
+          <h1>Welcome to Empathy Game:</h1>
+          <h2>Youth and Social Mobility</h2>
+          <button id="welcome-btn" class="btn next-btn">P L A Y</button>
+        </div>
+        <div class="img-background"></div>
+      </div>
+      <div id="intro1" class="content hide">
+        <div class="text introBg1">
+          <h1>
+            <span>
+              This is an exercise intended to develop your empathy skills.
+              Empathy allows us to understand different individuals’ or groups’
+              perspectives without having directly experienced them ourselves.
+            </span>
+          </h1>
+        </div>
+        <div class="options">
+          <button id="intro1-btn" class="btn next-btn">Continue</button>
+        </div>
+      </div>
+      <div id="intro2" class="content hide">
+        <div class="text introBg2">
+          <h2>
+            In this exercise, you will choose a persona and go through a series
+            of tasks. You have 2 goals:<br /><br />
+            1. Complete your homework assignment, which takes 1 hour. <br />
+            2. Pay the university application fee, which costs $100.
+          </h2>
+        </div>
+        <div class="options">
+          <button id="intro2-btn" class="btn next-btn">Continue</button>
+        </div>
+      </div>
+      <div id="intro3" class="pick content hide">
+        <div class="text">
+          <h2>Pick Your Character</h2>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="assets/character/1.png" style="width: 100%" />
+              <div class="charText">Player A</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/character/2.png" style="width: 100%" />
+              <div class="charText">Player B</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/character/3.png" style="width: 100%" />
+              <div class="charText">Player C</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br />
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+      <div id="char1" class="content img-char1 animateCharacter hide">
+        <div class="text">
+          <div>
+            <h1>Player A</h1>
+            <h4>Household</h4>
+            <ul>
+              <li>You are from a high-income family.</li>
+              <li>You live in a landed property.</li>
+              <li>
+                Your father is a surgeon and your mother is a partner at a law
+                firm. In addition to your parents, you also live with your
+                retired grandmother, domestic helper, and two dogs.
+              </li>
+            </ul>
+            <h4>Hobbies</h4>
+            <ul>
+              <li>
+                You have been playing the violin for the past 12 years and are
+                on your way to earning a diploma.
+              </li>
+              <li>
+                You have a large but close social circle, most of whom live in
+                the same area and are the children of your parents’ colleagues.
+              </li>
+            </ul>
+            <h4>Finances</h4>
+            <ul>
+              <li>
+                Your parents created a trust fund for you when you were born.
+              </li>
+              <li>You have an allowance of $1000 per month.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="options">
+          <button id="char1-btn" class="btn next-btn">Continue</button>
+        </div>
+      </div>
+      <div id="char2" class="content img-char2 animateCharacter hide">
+        <div class="text">
+          <div>
+            <h1>Player B</h1>
+            <h4>Household</h4>
+            <ul>
+              <li>You are from a middle-income family.</li>
+              <li>You live in a condominium and share a bedroom.</li>
+              <li>
+                Your parents are both managers at an accounting company. In
+                addition to your parents, you live with your younger sibling.
+              </li>
+            </ul>
+            <h4>Hobbies</h4>
+            <ul>
+              <li>
+                You have been playing the violin for the last 6 years, ever
+                since your father got promoted and could afford lessons for you.
+              </li>
+              <li>You are relatively popular at school.</li>
+            </ul>
+            <h4>Finances</h4>
+            <ul>
+              <li>You have an allowance of $500 per month.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="options">
+          <button id="char2-btn" class="btn next-btn">Continue</button>
+        </div>
+      </div>
+      <div id="char3" class="content img-char3 animateCharacter hide">
+        <div class="text">
+          <div>
+            <h1>Player C</h1>
+            <h4>Household</h4>
+            <ul>
+              <li>You are from a low-income family.</li>
+              <li>You live in a rental one-room flat.</li>
+              <li>
+                Your father is a bus driver and your mother is a cleaner. In
+                addition to your parents, you live with your 2 grandparents (who
+                are also cleaners), and 2 younger siblings.
+              </li>
+            </ul>
+            <h4>Hobbies</h4>
+            <ul>
+              <li>
+                You rarely have time for hobbies in between studies and work.
+              </li>
+              <li>
+                You have trouble making friends as you do not want to tell them
+                about your situation.
+              </li>
+            </ul>
+            <h4>Finances</h4>
+            <ul>
+              <li>
+                You work a part-time job at a fast food restaurant and currently
+                have $100 saved up.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="options">
+          <button id="char3-btn" class="btn next-btn">Continue</button>
+        </div>
+      </div>
+      <div id="content" class="content hide">
+        <div id="content-text" class="text"></div>
+        <div id="content-options" class="options content-options"></div>
+      </div>
+      <div id="end1" class="content hide">
+        <div
+          class="text"
+          style="
+            text-align: center;
+            background-color: antiquewhite;
+            border-color: rgb(250, 226, 92);
+          "
+        >
+          <h1>
+            Congratulations!<br />
+            It's the end of Circuit Breaker
+          </h1>
+          <p>
+            As a result of the circuit breaker caused by <br />
+            COVID-19, the elderly faced a lot of difficulties. <br />
+            Not only in their physical health, but also their <br />
+            mental health and financial struggles.
+          </p>
+        </div>
+        <div class="options">
+          <button id="end1-btn" class="btn next-btn">Continue</button>
+        </div>
+      </div>
+      <div id="end2" class="content hide">
+        <div class="text">
+          <h3>
+            Many of our seniors did not have it easy during circuit breaker.
+            Here are some of the struggles they encountered over a span of 2.5
+            months. Are you able to identify any of these with the senarios you
+            just went through?
+          </h3>
+          <ul>
+            <li>Difficulty adhering to circuit breaker regulations.</li>
+            <li>Rising unemployment coupled with job instability.</li>
+            <li>Loneliness and a strain on mental and/or physical health.</li>
+            <li>Increased vulnerability to virus.</li>
+            <li>
+              An increasing lack of cash. The tightened purse strings of their
+              children could result in a trickle down effect to their parents.
+            </li>
+            <li>
+              Difficulty staying digitally connected due to digital illiteracy.
+            </li>
+          </ul>
+        </div>
+        <div class="options" style="padding: 2rem auto">
+          <button id="end2-btn" class="btn next-btn">Continue</button>
+        </div>
+      </div>
+      <div id="end3" class="content hide">
+        <div class="text">
+          <h3>
+            And you know what? Social inequality exists. <br />
+            In reality, not everybody will start off at the same health, social
+            & wealth levels. Everyone is going through a different life story.
+            <br />
+            How does that look like? To find out more,
+          </h3>
+        </div>
+        <div
+          class="options img-end3"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <button id="end3-btn" class="btn again-btn">Play Again</button>
+          <button id="credit-btn" class="btn credit-btn">END</button>
+        </div>
+      </div>
+      <div id="credit" class="content hide">
+        <div class="text" style="text-align: center">
+          <h1>Credits</h1>
+          <p>SORISTIC</p>
+          <p>SEEDS OF GOOD PROGRAM <br />SOGP</p>
+          <p>NATIONAL UNIVERSITY OF SINGAPORE <br />NUS</p>
+        </div>
+        <div class="options img-cred1">
+          <button id="end4-btn" class="btn again-btn">Play Again</button>
+        </div>
+      </div>
+      <div id="gameover" class="content hide">
+        <div class="text" style="text-align: center">
+          <h1>Your didn't make it.</h1>
+          <p>
+            Many of our seniors did not have it easy during the circuit breaker.
+            <br />To find out more,
+          </p>
+        </div>
+        <div class="options img-cred1">
+          <button id="gameover-btn" class="btn again-btn">Play Again</button>
+        </div>
+      </div>
+      <!-- end content -->
+      <!-- profile  -->
+      <div
+        id="currProfile"
+        class="content hide"
+        style="background-position: 10% 40%"
+      >
+        <div class="text">
+          <h2></h2>
+          <h4>Employment</h4>
+          <ul></ul>
+          <h4>Family</h4>
+          <ul></ul>
+          <h4>Social Circle</h4>
+          <ul></ul>
+          <h4>Health</h4>
+          <ul></ul>
+          <h4>Finances</h4>
+          <ul></ul>
+        </div>
+      </div>
+      <!-- footer bar -->
+      <div id="footer" class="footer">
+        <!-- <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-menu-2"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#2c3e50"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </div> -->
+        <div>
+          <button id="profile" aria-label="check current character">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-user-plus"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg>
+          </button>
+        </div>
+        <div style="text-align: center; user-select: none">
+          Empathy Game <br />Soristic
+        </div>
+        <button id="soundOnBtn" class="hide" aria-label="sound on">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-volume"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#2c3e50"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 8a5 5 0 0 1 0 8" />
+            <path d="M17.7 5a9 9 0 0 1 0 14" />
+            <path
+              d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"
+            />
+          </svg>
+        </button>
+        <button id="soundOffBtn" class="" aria-label="sound off">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-volume-3"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#2c3e50"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"
+            />
+            <path d="M16 10l4 4m0 -4l-4 4" />
+          </svg>
+        </button>
+      </div>
+      <!-- end footer bar -->
+    </div>
+    <!-- front page background animation -->
+    <ul id="background" class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- end front page background animation -->
+  </body>
+</html>
