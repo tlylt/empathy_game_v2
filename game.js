@@ -990,36 +990,31 @@ const playerCTextNodes = [
       {
         text: `Study at home.`,
         next: 5.2,
-        updateState: { time: -3, wealth: -60 },
       }
     ]
   },
   {
     id: 5.1,
-    text: `By calling your private tutor,
+    text: `By studying at the local library,
 
-    Your time decreases. 
-    Though it takes some time for you to eventually understand the work, your tutor is able to work with you on your specific questions without being distracted by other students.
+    Your time decreases.
+    The library is crowded at this time of day and you need to find a seat and the books you require.
 
     Your money decreases.
-    You have to compensate your private tutor for your time, and at a relatively high price given their qualifications and because they are not teaching anybody else.
+    You have some overdue fines and need to pay them off before being allowed to borrow new books.
     `,
     options: [
       {
         text: `Continue`,
-        next: 6,
+        next: 7,
       }
     ]
   },
   {
     id: 5.2,
-    text: `By going to a tuition centre, 
+    text: `By going home to study,
 
-    Your time decreases.
-    You spend most of your evening doing homework, as the tutor also has to attend to other students.
-
-    Your money decreases. 
-    You have to pay the tuition centre for each session.
+    You realise there are other pressing priorities at home.
     `,
     options: [
       {
@@ -1030,29 +1025,29 @@ const playerCTextNodes = [
   },
   {
     id: 6,
-    text: `One of your best friends is celebrating their birthday this weekend. What do you plan to get them?`,
+    text: `You get home to discover that your grandparent is unwell and needs medication. What do you do?`,
     options: [
       {
-        text: `A nice meal at their favourite restaurant, which you will make a reservation for.`,
+        text: `Take them to the clinic and pick up some medication from the pharmacy.`,
         next: 6.1,
-        updateState: { wealth: -80 },
+        updateState: { time: -2, wealth: -50 },
       },
       {
-        text: `A video game they have been wanting to play for a long time.`,
+        text: `Fix the issue another day.`,
         next: 6.2,
-        updateState: { wealth: -60 },
+        updateState: { time: -3 },
       }
     ]
   },
   {
     id: 6.1,
-    text: `By making a restaurant reservation,
+    text: `By taking your grandparent to the clinic,
 
-    Your time stays the same.
-    You are able to get them a gift almost instantly and have more time left for the rest of your tasks.
+    Your time decreases.
+    You will have to wait with your grandparent until they can get an appointment, and help them communicate with the doctor.
 
     Your money decreases.
-    You use some of your allowance to make a deposit at the restaurant, as is necessary when placing a reservation. 
+    You need to pay a consultation fee in addition to the cost of the medication.
     `,
     options: [
       {
@@ -1063,13 +1058,10 @@ const playerCTextNodes = [
   },
   {
     id: 6.2,
-    text: `By buying them a video game,
+    text: `By not taking your grandparent to the clinic,
 
-    Your time stays the same.
-    You are able to order the gift online and don’t have to visit the store to do so. 
-    
-    Your money decreases.
-    You have to pay for premium shipping in order to get the gift on time, which increases the cost. 
+    Your time decreases. 
+    You will have to look after your siblings because your grandparent is too unwell to do so. 
     `,
     options: [
       {
@@ -1080,25 +1072,28 @@ const playerCTextNodes = [
   },
   {
     id: 7,
-    text: `You’re finally home. However, your laptop breaks down, meaning you can’t finish your remaining tasks. What do you do?`,
+    text: `One of your best friends is celebrating their birthday this weekend. What do you plan to get them?`,
     options: [
       {
-        text: `Use the spare desktop computer in the study. It’s slower but it will do the job.`,
+        text: `A handmade card, in order to save money.`,
         next: 7.1,
-        updateState: { time: -2 }
+        updateState: { wealth: -5, time: -0.5 },
       },
       {
-        text: `Pay for emergency laptop repairs.`,
+        text: `A book voucher, pooled together with money from your classmates.`,
         next: 7.2,
-        updateState: { time: -0.5, wealth: -250 },
+        updateState: { wealth: -10 },
       }
     ]
   },
   {
     id: 7.1,
-    text: `If you use the spare desktop computer,
+    text: `By making them a handmade card,
 
-    Your time decreases. 
+    Your time decreases.
+    You have to spend time not only making the card, but buying the supplies you need in order to do so.
+
+    Your money decreases.    
     `,
     options: [
       {
@@ -1109,13 +1104,13 @@ const playerCTextNodes = [
   },
   {
     id: 7.2,
-    text: `If you pay for emergency laptop repairs,
+    text: `By buying them a book voucher,
 
-    Your time decreases.
-    You still need to go to the repair shop and wait for them to find and solve the issue.
-    
+    Your time stays the same. 
+    You are able to order the gift online and don’t have to visit the store to do so.
+
     Your money decreases.
-    Getting a laptop repaired quickly costs you more than it would otherwise. 
+    You only have to contribute your share of the present. 
     `,
     options: [
       {
@@ -1126,46 +1121,141 @@ const playerCTextNodes = [
   },
   {
     id: 8,
-    text: `Do you have enough resources (1 hour and $100) to submit your university application?`,
+    text: `Bills have increased this month and your parents are working overtime to make ends meet. You need to find some dinner for yourself. What will you do?`,
     options: [
       {
-        text: `Yes`,
+        text: `Pick up food from the hawker centre.`,
         next: 8.1,
+        updateState: { time: -0.25, wealth: -15 }
       },
       {
-        text: `No`,
+        text: `Work a shift at a fast-food restaurant and bring home the leftovers.`,
         next: 8.2,
+        updateState: { time: -3, wealth: 40 }
       }
     ]
   },
   {
     id: 8.1,
+    text: `If you pick up food from the hawker centre,
+
+    Your time decreases.
+    Hawker centre food is ready to eat but also crowded at this time of day.
+
+    Your money decreases.
+    `,
+    options: [
+      {
+        text: `Continue`,
+        next: 9,
+      },
+    ]
+  },
+  {
+    id: 8.2,
+    text: `If you work a shift at a fast-food restaurant,
+
+    Your time decreases.
+    Shifts are a fixed interval of time and you cannot negotiate these.
+
+    Your money increases.
+    `,
+    options: [
+      {
+        text: `Continue`,
+        next: 9,
+      }
+    ]
+  },
+  {
+    id: 9,
+    text: `You’re finally home. However, your laptop breaks down, meaning you can’t finish your remaining tasks. What do you do?`,
+    options: [
+      {
+        text: `Go back to the library and see if you can use one of their laptops for now.`,
+        next: 9.1,
+        updateState: { time: -2, wealth: -10 }
+      },
+      {
+        text: `Reach out to a charity that provides free laptop loans to low-income students.`,
+        next: 9.2,
+        updateState: { time: -24 },
+      }
+    ]
+  },
+  {
+    id: 9.1,
+    text: `By going back to the library,
+
+    Your time decreases. 
+    You have to find a way of getting back to the library, finding an available computer and getting your work done before closing time.
+
+    Your money decreases.
+    You have to pay for public transport.
+    `,
+    options: [
+      {
+        text: `Continue`,
+        next: 10,
+      }
+    ]
+  },
+  {
+    id: 9.2,
+    text: `By reaching out to a charity,
+
+    Your time decreases. 
+    Charity staff are only available during working hours and will need time to process your application.
+    `,
+    options: [
+      {
+        text: `Continue`,
+        next: 10,
+      }
+    ]
+  },
+  {
+    id: 10,
+    text: `Do you have enough resources (1 hour and $100) to submit your university application?`,
+    options: [
+      {
+        text: `Yes`,
+        next: 10.1,
+      },
+      {
+        text: `No`,
+        next: 10.2,
+      }
+    ]
+  },
+  {
+    id: 10.1,
     text: `Congratulations, you have completed your goals.
 
     However, it is worth keeping in mind that not everybody has the resources to do so. Try repeating this exercise as a different colour and see for yourself.
     `,
     options: [
       {
-        Text: `Try Again`,
+        text: `Try Again`,
         next: -1,
       },
       {
-        Text: `Quit`,
+        text: `Quit`,
         next: -1,
       }
     ]
   },
   {
-    id: 8.2,
+    id: 10.2,
     text: `You have not completed your goals and missed an opportunity for social mobility. Although you can repeat this exercise by playing as the same persona and making different choices, you can also try again as a different persona. Think about whether it is easier or harder for some people to approach these tasks due to the differing levels of time and money available. 
     `,
     options: [
       {
-        Text: `Try Again`,
+        text: `Try Again`,
         next: -1,
       },
       {
-        Text: `Quit`,
+        text: `Quit`,
         next: -1,
       }
     ]

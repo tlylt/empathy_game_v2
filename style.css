@@ -652,13 +652,14 @@ body {
 }
 
 .mySlides img {
-  cursor: pointer;
+  height: 20rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 /* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
@@ -687,8 +688,6 @@ body {
 .charText {
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
 }
@@ -980,7 +979,8 @@ body {
   cursor: url(assets/cursors/curpointer.cur), auto !important;
 }
 
-.btn:hover {
+.btn:hover,
+.mySlides img {
   cursor: url(assets/cursors/curhand.cur), auto !important;
 }
 
