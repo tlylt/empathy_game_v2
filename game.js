@@ -8,7 +8,6 @@ if ("serviceWorker" in navigator) {
     console.log(error);
   });
 }
-window.scrollTo(0, 1);
 
 // Game internal state
 let state;
@@ -349,6 +348,7 @@ const playerATextNodes = [
       {
         text: `Continue`,
         next: 8,
+        done: true,
       }
     ]
   },
@@ -366,6 +366,7 @@ const playerATextNodes = [
       {
         text: `Continue`,
         next: 8,
+        done: true,
       }
     ]
   },
@@ -375,11 +376,11 @@ const playerATextNodes = [
     options: [
       {
         text: `Yes`,
-        next: 8.1,
+        next: "win",
       },
       {
         text: `No`,
-        next: 8.2,
+        next: "lose",
       }
     ]
   },
@@ -730,6 +731,7 @@ const playerBTextNodes = [
       {
         text: `Continue`,
         next: 8,
+        done: true,
       }
     ]
   },
@@ -746,6 +748,7 @@ const playerBTextNodes = [
       {
         text: `Continue`,
         next: 8,
+        done: true,
       }
     ]
   },
@@ -755,11 +758,11 @@ const playerBTextNodes = [
     options: [
       {
         text: `Yes`,
-        next: 8.1,
+        next: "win",
       },
       {
         text: `No`,
-        next: 8.2,
+        next: "lose",
       }
     ]
   },
@@ -797,7 +800,7 @@ const playerBTextNodes = [
   }
 ]
 
-// Character 1
+// Character 3
 const playerCTextNodes = [
   {
     time: 8,
@@ -1197,6 +1200,7 @@ const playerCTextNodes = [
       {
         text: `Continue`,
         next: 10,
+        done: true,
       }
     ]
   },
@@ -1211,6 +1215,7 @@ const playerCTextNodes = [
       {
         text: `Continue`,
         next: 10,
+        done: true,
       }
     ]
   },
@@ -1220,11 +1225,11 @@ const playerCTextNodes = [
     options: [
       {
         text: `Yes`,
-        next: 10.1,
+        next: "win",
       },
       {
         text: `No`,
-        next: 10.2,
+        next: "lose",
       }
     ]
   },
@@ -1241,7 +1246,7 @@ const playerCTextNodes = [
       },
       {
         text: `Quit`,
-        next: -1,
+        next: -2,
       }
     ]
   },
@@ -1256,7 +1261,7 @@ const playerCTextNodes = [
       },
       {
         text: `Quit`,
-        next: -1,
+        next: -2,
       }
     ]
   }
@@ -1658,12 +1663,9 @@ const intro3Element = document.getElementById("intro3");
 // game end elements
 const creditElement = document.getElementById("credit");
 const creditBtnElement = document.getElementById("credit-btn");
+const credit1BtnElement = document.getElementById("credit1-btn");
 const end1Element = document.getElementById("end1");
 const end1BtnElement = document.getElementById("end1-btn");
-const end2Element = document.getElementById("end2");
-const end2BtnElement = document.getElementById("end2-btn");
-const end3Element = document.getElementById("end3");
-const end3BtnElement = document.getElementById("end3-btn");
 const end4BtnElement = document.getElementById("end4-btn");
 const gameoverElement = document.getElementById("gameover");
 const gameoverBtnElement = document.getElementById("gameover-btn");
@@ -1675,10 +1677,9 @@ welcomeBtnElement.onclick = () => {
 };
 intro1BtnElement.onclick = () => toggleHide(intro1Element, intro2Element);
 intro2BtnElement.onclick = () => toggleHide(intro2Element, intro3Element);
-end1BtnElement.onclick = () => toggleHide(end1Element, end2Element);
-end2BtnElement.onclick = () => toggleHide(end2Element, end3Element);
-creditBtnElement.onclick = () => toggleHide(end3Element, creditElement);
-end3BtnElement.onclick = () => restart();
+end1BtnElement.onclick = () => restart();
+creditBtnElement.onclick = () => toggleHide(end1Element, creditElement);
+credit1BtnElement.onclick = () => toggleHide(gameoverElement, creditElement);
 end4BtnElement.onclick = () => restart();
 gameoverBtnElement.onclick = () => {
   toggleHide(gameoverElement);
@@ -1695,7 +1696,7 @@ const toggleProfileBtn = function () {
   // currProfile.classList.add(`img-char${currId}`);
   [{ profile: [, currProfile.querySelector("h2").innerText] }] = currentStory;
   // eslint-disable-next-line no-plusplus
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < 4; i++) {
     // eslint-disable-next-line prefer-destructuring
     currProfile.querySelector(`ul:nth-of-type(${i})`).innerHTML = currentStory[0]["profile"][i + 1];
   }
@@ -1754,8 +1755,6 @@ const elements = [
   intro2Element,
   creditElement,
   end1Element,
-  end2Element,
-  end3Element,
 ];
 
 // Story info
@@ -1801,11 +1800,49 @@ const showTextNode = function (textNodeIndex) {
   }
   // create new options
   textNode.options.forEach((option) => {
+
     const button = document.createElement("button");
     ({ text: button.innerText } = option);
     button.classList.add("btn");
     button.classList.add("option-btn");
     button.classList.add("in");
+    if (option.text === "Yes") {
+      const { [record.length - 1]: latest } = record;
+      if (latest["wealth"] < 100 || latest["time"] < 1) {
+        console.log("lose!!")
+        button.disabled = true;
+        button.style.border = "none";
+        button.style.textDecoration = "line-through";
+        button.style.backgroundColor = "darkgrey";
+        setTimeout(() => {
+          button.classList.add("puff-out-center");
+        }, 3000);
+        setTimeout(() => {
+          button.classList.add("hide")
+        }, 4000)
+      } else {
+        button.style.backgroundColor = "mediumspringgreen";
+      }
+    }
+    if (option.text === "No") {
+
+      const { [record.length - 1]: latest } = record;
+      if (latest["wealth"] >= 100 && latest["time"] >= 1) {
+        console.log("win!!")
+        button.disabled = true;
+        button.style.border = "none";
+        button.style.textDecoration = "line-through";
+        button.style.backgroundColor = "darkgrey";
+        setTimeout(() => {
+          button.classList.add("puff-out-center");
+        }, 3000);
+        setTimeout(() => {
+          button.classList.add("hide")
+        }, 4000)
+      } else {
+        button.style.backgroundColor = "mediumspringgreen";
+      }
+    }
     button.onclick = () => selectOption(option, false);
     contentOptionsElement.appendChild(button);
   });
@@ -1854,6 +1891,13 @@ const updateMeters = function () {
           400
         );
       }
+      if (meter === "time") {
+        document.getElementById(meter).classList.add("shake-horizontal");
+        setTimeout(
+          () => document.getElementById(meter).classList.remove("shake-horizontal"),
+          400
+        );
+      }
       setTimeout(() => element.classList.add("in"), 500);
       setTimeout(() => ({ [meter]: element.innerText } = latest), 500);
       setTimeout(() => element.classList.remove("in"), 2000);
@@ -1865,8 +1909,11 @@ const updateMeters = function () {
 const selectOption = function (option) {
   newState = { ...record[record.length - 1] };
   const { "next": nextTextNodeId } = option;
-  if (nextTextNodeId <= 0) {
+  if (nextTextNodeId === "win") {
     return goEndScene();
+  }
+  if (nextTextNodeId === "lose") {
+    return goGameOverScene();
   }
   if (option.updateState) {
     // an update is required

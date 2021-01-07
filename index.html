@@ -49,8 +49,8 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-alarm"
-            width="44"
-            height="44"
+            width="64"
+            height="64"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="#2c3e50"
@@ -70,8 +70,8 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-coin"
-            width="44"
-            height="44"
+            width="64"
+            height="64"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="#2c3e50"
@@ -100,10 +100,10 @@
         <div class="img-background"></div>
       </div>
       <div id="intro1" class="content hide">
-        <div class="text introBg1">
+        <div class="text introBg1" style="text-align: initial">
           <h1>
             <span>
-              This is an exercise intended to develop your empathy skills.
+              This is an exercise intended to develop your empathy skills.<br />
               Empathy allows us to understand different individuals’ or groups’
               perspectives without having directly experienced them ourselves.
             </span>
@@ -117,8 +117,8 @@
         <div class="text introBg2">
           <h2>
             In this exercise, you will choose a persona and go through a series
-            of tasks. You have 2 goals:<br /><br />
-            1. Complete your homework assignment, which takes 1 hour. <br />
+            of tasks. You have 2 goals: 1. Complete your homework assignment,
+            which takes 1 hour. <br />
             2. Pay the university application fee, which costs $100.
           </h2>
         </div>
@@ -154,7 +154,7 @@
           </div>
         </div>
       </div>
-      <div id="char1" class="content img-char1 animateCharacter hide">
+      <div id="char1" class="content hide">
         <div class="text">
           <div>
             <h1>Player A</h1>
@@ -192,7 +192,7 @@
           <button id="char1-btn" class="btn next-btn">Continue</button>
         </div>
       </div>
-      <div id="char2" class="content img-char2 animateCharacter hide">
+      <div id="char2" class="content hide">
         <div class="text">
           <div>
             <h1>Player B</h1>
@@ -223,7 +223,7 @@
           <button id="char2-btn" class="btn next-btn">Continue</button>
         </div>
       </div>
-      <div id="char3" class="content img-char3 animateCharacter hide">
+      <div id="char3" class="content hide">
         <div class="text">
           <div>
             <h1>Player C</h1>
@@ -275,60 +275,20 @@
         >
           <h1>
             Congratulations!<br />
-            It's the end of Circuit Breaker
+            You have completed your goals.
           </h1>
           <p>
-            As a result of the circuit breaker caused by <br />
-            COVID-19, the elderly faced a lot of difficulties. <br />
-            Not only in their physical health, but also their <br />
-            mental health and financial struggles.
+            However, it is worth keeping in mind that not everybody has the
+            resources to do so. <br />
+            Try repeating this exercise as a different colour and see for
+            yourself.
           </p>
-        </div>
-        <div class="options">
-          <button id="end1-btn" class="btn next-btn">Continue</button>
-        </div>
-      </div>
-      <div id="end2" class="content hide">
-        <div class="text">
-          <h3>
-            Many of our seniors did not have it easy during circuit breaker.
-            Here are some of the struggles they encountered over a span of 2.5
-            months. Are you able to identify any of these with the senarios you
-            just went through?
-          </h3>
-          <ul>
-            <li>Difficulty adhering to circuit breaker regulations.</li>
-            <li>Rising unemployment coupled with job instability.</li>
-            <li>Loneliness and a strain on mental and/or physical health.</li>
-            <li>Increased vulnerability to virus.</li>
-            <li>
-              An increasing lack of cash. The tightened purse strings of their
-              children could result in a trickle down effect to their parents.
-            </li>
-            <li>
-              Difficulty staying digitally connected due to digital illiteracy.
-            </li>
-          </ul>
-        </div>
-        <div class="options" style="padding: 2rem auto">
-          <button id="end2-btn" class="btn next-btn">Continue</button>
-        </div>
-      </div>
-      <div id="end3" class="content hide">
-        <div class="text">
-          <h3>
-            And you know what? Social inequality exists. <br />
-            In reality, not everybody will start off at the same health, social
-            & wealth levels. Everyone is going through a different life story.
-            <br />
-            How does that look like? To find out more,
-          </h3>
         </div>
         <div
           class="options img-end3"
           style="display: flex; flex-direction: column; align-items: center"
         >
-          <button id="end3-btn" class="btn again-btn">Play Again</button>
+          <button id="end1-btn" class="btn again-btn">Play Again</button>
           <button id="credit-btn" class="btn credit-btn">END</button>
         </div>
       </div>
@@ -345,32 +305,35 @@
       </div>
       <div id="gameover" class="content hide">
         <div class="text" style="text-align: center">
-          <h1>Your didn't make it.</h1>
+          <h1>
+            Your didn't make it. <br />
+            You have not completed your goals and missed an opportunity for
+            social mobility.
+          </h1>
           <p>
-            Many of our seniors did not have it easy during the circuit breaker.
-            <br />To find out more,
+            Although you can repeat this exercise by playing as the same persona
+            and making different choices, you can also try again as a different
+            persona. Think about whether it is easier or harder for some people
+            to approach these tasks due to the differing levels of time and
+            money available.
           </p>
         </div>
-        <div class="options img-cred1">
+        <div
+          class="options img-cred1"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
           <button id="gameover-btn" class="btn again-btn">Play Again</button>
+          <button id="credit1-btn" class="btn credit-btn">END</button>
         </div>
       </div>
       <!-- end content -->
       <!-- profile  -->
-      <div
-        id="currProfile"
-        class="content hide"
-        style="background-position: 10% 40%"
-      >
+      <div id="currProfile" class="content hide">
         <div class="text">
           <h2></h2>
-          <h4>Employment</h4>
+          <h4>Household</h4>
           <ul></ul>
-          <h4>Family</h4>
-          <ul></ul>
-          <h4>Social Circle</h4>
-          <ul></ul>
-          <h4>Health</h4>
+          <h4>Hobbies</h4>
           <ul></ul>
           <h4>Finances</h4>
           <ul></ul>
@@ -378,25 +341,6 @@
       </div>
       <!-- footer bar -->
       <div id="footer" class="footer">
-        <!-- <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-menu-2"
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#2c3e50"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <line x1="4" y1="6" x2="20" y2="6" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-            <line x1="4" y1="18" x2="20" y2="18" />
-          </svg>
-        </div> -->
         <div>
           <button id="profile" aria-label="check current character">
             <svg
