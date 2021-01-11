@@ -62,7 +62,7 @@
   <body>
     <div class="grid-container">
       <!-- header bar -->
-      <div id="header" class="header hide">
+      <div id="header" class="header hide" style="text-align: center">
         <div id="time">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,9 +82,9 @@
             <line x1="7" y1="4" x2="4.25" y2="6" />
             <line x1="17" y1="4" x2="19.75" y2="6" />
           </svg>
-          <div id="time-meter"></div>
+          <div id="time-meter"><span></span><span> hours</span></div>
         </div>
-        <div id="wealth">
+        <div id="wealth" style="text-align: center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-coin"
@@ -119,13 +119,13 @@
       </div>
       <div id="intro1" class="content hide">
         <div class="text introBg1" style="text-align: initial">
-          <h1>
+          <h2>
             <span>
-              This is an exercise intended to develop your empathy skills.<br />
+              This is an exercise intended to develop your empathy skills.<br /><br />
               Empathy allows us to understand different individuals’ or groups’
               perspectives without having directly experienced them ourselves.
             </span>
-          </h1>
+          </h2>
         </div>
         <div class="options">
           <button id="intro1-btn" class="btn next-btn">Continue</button>
@@ -134,10 +134,16 @@
       <div id="intro2" class="content hide">
         <div class="text introBg2">
           <h2>
-            In this exercise, you will choose a persona and go through a series
-            of tasks. You have 2 goals: 1. Complete your homework assignment,
-            which takes 1 hour. <br />
-            2. Pay the university application fee, which costs $100.
+            <span>
+              In this exercise, you will choose a persona and go through a
+              series of tasks.<span class="spacer"></span><br /><br />
+              Each persona has <bold>free</bold> time and
+              <bold>money</bold> points.<span class="spacer"></span><br /><br />
+              To win the game, you need to have enough points to apply to
+              university. This requires:<span class="spacer"></span><br />
+              1. <bold>0.5 hours</bold>.<span class="spacer"></span><br />
+              2. <bold>$100</bold>.<span class="spacer"></span>
+            </span>
           </h2>
         </div>
         <div class="options">

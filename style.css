@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
 /* setting up background */
 *,
 *::before,
@@ -15,6 +17,9 @@ ul li {
   overflow: visible;
 }
 
+bold {
+  font-weight: 900;
+}
 body {
   padding: 0;
   margin: 0;
@@ -530,14 +535,14 @@ body {
 }
 
 #intro2 .text h2 {
-  background-color: #ffffff;
-  padding: 5px;
+  text-align: initial;
 }
 .spacer {
   padding: 0 5px;
 }
 
-#intro1 .text h1 span,
+#intro1 .text h2 span,
+#intro2 .text h2 span,
 .spacer {
   background-color: #ffffff;
 }

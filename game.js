@@ -18,7 +18,7 @@ let currentStory;
 // Character 1
 const playerATextNodes = [
   {
-    time: 8,
+    time: 8.0,
     wealth: 1000,
     profile: [
       1,
@@ -64,7 +64,7 @@ const playerATextNodes = [
     id: 1.2,
     text: `By waking up at 6:30am,
     
-    Your time increases. 
+    Your time increases.
     You are able to get some personal tasks done and clear more time in your schedule for your university application.
     `,
     options: [
@@ -179,12 +179,12 @@ const playerATextNodes = [
       {
         text: `Ask your parents to call your violin teacher, who will help you choose an instrument to buy.`,
         next: 4.1,
-        updateState: { time: -0.5, wealth: -200 },
+        updateState: { wealth: -200 },
       },
       {
         text: `Spend some time researching second-hand violins.`,
         next: 4.2,
-        updateState: { time: -1, wealth: -80 },
+        updateState: { time: -0.5, wealth: -80 },
       }
     ]
   },
@@ -192,8 +192,8 @@ const playerATextNodes = [
     id: 4.1,
     text: `By calling your violin teacher,
 
-    Your time decreases.
-    Your violin teacher is an expert and quickly helps you choose the best violin available.
+    Your time stays the same.
+    Your violin teacher is an expert and chooses the instrument on your behalf, taking up on time of your own.
     
     Your money decreases. 
     Thankfully, you are able to afford the highest quality violin on offer, but it comes at a price. 
@@ -372,7 +372,7 @@ const playerATextNodes = [
   },
   {
     id: 8,
-    text: `Do you have enough resources (1 hour and $100) to submit your university application?`,
+    text: `Do you have enough resources (0.50 hours and $100) to submit your university application?`,
     options: [
       {
         text: `Yes`,
@@ -388,7 +388,7 @@ const playerATextNodes = [
     id: 8.1,
     text: `Congratulations, you have completed your goals.
 
-    However, it is worth keeping in mind that not everybody has the resources to do so. Try repeating this exercise as a different colour and see for yourself.
+    However, it is worth keeping in mind that not everybody has the resources to do so. Try repeating this exercise as a different player and see for yourself.
     `,
     options: [
       {
@@ -421,7 +421,7 @@ const playerATextNodes = [
 // Character 2
 const playerBTextNodes = [
   {
-    time: 8,
+    time: 8.0,
     wealth: 500,
     profile: [
       2,
@@ -516,7 +516,7 @@ const playerBTextNodes = [
       {
         text: `You use a concession card to take the MRT and bus to school.`,
         next: 3.2,
-        updateState: { time: -1, wealth: -10 },
+        updateState: { time: -0.75, wealth: -10 },
       }
     ]
   },
@@ -560,12 +560,12 @@ const playerBTextNodes = [
       {
         text: `Rent a violin from a shop near school.`,
         next: 4.1,
-        updateState: { time: -1.5, wealth: -40 },
+        updateState: { time: -1, wealth: -40 },
       },
       {
         text: `Spend some time researching second-hand violins.`,
         next: 4.2,
-        updateState: { time: -1, wealth: -80 },
+        updateState: { time: -0.5, wealth: -80 },
       }
     ]
   },
@@ -615,7 +615,7 @@ const playerBTextNodes = [
       {
         text: `You study for a few hours at a cafe.`,
         next: 5.2,
-        updateState: { time: -2, wealth: -20 },
+        updateState: { time: -1, wealth: -20 },
       }
     ]
   },
@@ -754,7 +754,7 @@ const playerBTextNodes = [
   },
   {
     id: 8,
-    text: `Do you have enough resources (1 hour and $100) to submit your university application?`,
+    text: `Do you have enough resources (0.50 hours and $100) to submit your university application?`,
     options: [
       {
         text: `Yes`,
@@ -803,7 +803,7 @@ const playerBTextNodes = [
 // Character 3
 const playerCTextNodes = [
   {
-    time: 8,
+    time: 8.0,
     wealth: 100,
     profile: [
       3,
@@ -821,8 +821,9 @@ const playerCTextNodes = [
     text: `It’s time to wake up and start the day. How do you do this?`,
     options: [
       {
-        text: `Your parents worked late last night, so you take care of morning chores by waking up at 5:30am.`,
+        text: `Your parents worked late last night, so you take care of morning chores by waking up at 6:00am.`,
         next: 1.1,
+        updateState: { time: -1 }
       },
     ]
   },
@@ -837,7 +838,6 @@ const playerCTextNodes = [
       {
         text: `Continue`,
         next: 2,
-        updateState: { time: -1.5 }
       }
     ]
   },
@@ -853,7 +853,7 @@ const playerCTextNodes = [
       {
         text: `Subsidised meals at school.`,
         next: 2.2,
-        updateState: { wealth: -5, time: -0.5 },
+        updateState: { wealth: -5, time: -0.25 },
       }
     ]
   },
@@ -895,7 +895,7 @@ const playerCTextNodes = [
       {
         text: `You use a concession card to take the MRT and bus to school.`,
         next: 3.1,
-        updateState: { time: -1, wealth: -10 },
+        updateState: { time: -0.75, wealth: -10 },
 
       },
       {
@@ -946,7 +946,7 @@ const playerCTextNodes = [
       {
         text: `Rent a violin from a shop near school.`,
         next: 4.2,
-        updateState: { time: -1.5, wealth: -40 },
+        updateState: { time: -1, wealth: -40 },
       }
     ]
   },
@@ -988,7 +988,7 @@ const playerCTextNodes = [
       {
         text: `Study at the local library.`,
         next: 5.1,
-        updateState: { time: -2, wealth: -5 },
+        updateState: { time: -1.5, wealth: -5 },
       },
       {
         text: `Study at home.`,
@@ -1080,7 +1080,7 @@ const playerCTextNodes = [
       {
         text: `A handmade card, in order to save money.`,
         next: 7.1,
-        updateState: { wealth: -5, time: -0.5 },
+        updateState: { time: -0.5 },
       },
       {
         text: `A book voucher, pooled together with money from your classmates.`,
@@ -1096,7 +1096,7 @@ const playerCTextNodes = [
     Your time decreases.
     You have to spend time not only making the card, but buying the supplies you need in order to do so.
 
-    Your money decreases.    
+    Your money stays the same.    
     `,
     options: [
       {
@@ -1134,7 +1134,7 @@ const playerCTextNodes = [
       {
         text: `Work a shift at a fast-food restaurant and bring home the leftovers.`,
         next: 8.2,
-        updateState: { time: -3, wealth: 40 }
+        updateState: { time: -2, wealth: 60 }
       }
     ]
   },
@@ -1177,7 +1177,7 @@ const playerCTextNodes = [
       {
         text: `Go back to the library and see if you can use one of their laptops for now.`,
         next: 9.1,
-        updateState: { time: -2, wealth: -10 }
+        updateState: { time: -0.5 }
       },
       {
         text: `Reach out to a charity that provides free laptop loans to low-income students.`,
@@ -1192,9 +1192,6 @@ const playerCTextNodes = [
 
     Your time decreases. 
     You have to find a way of getting back to the library, finding an available computer and getting your work done before closing time.
-
-    Your money decreases.
-    You have to pay for public transport.
     `,
     options: [
       {
@@ -1221,7 +1218,7 @@ const playerCTextNodes = [
   },
   {
     id: 10,
-    text: `Do you have enough resources (1 hour and $100) to submit your university application?`,
+    text: `Do you have enough resources (0.50 hour and $100) to submit your university application?`,
     options: [
       {
         text: `Yes`,
@@ -1883,13 +1880,18 @@ const updateMeters = function () {
   const list = ["wealth", "time"];
   list.forEach((meter) => {
     const { [meter]: element } = meterList;
-    if (element.innerText !== latest[meter].toString()) {
-      if (meter === "wealth") {
+    if (element.innerText.split(" ")[0] !== latest[meter].toFixed(2)) {
+      if (meter === "wealth" && element.innerText !== latest[meter].toString()) {
         document.getElementById(meter).classList.add("vibrate-1");
+        setTimeout(() => {
+          element.innerText = latest[meter];
+        }, 500);
         setTimeout(
           () => document.getElementById(meter).classList.remove("vibrate-1"),
           400
         );
+        setTimeout(() => element.classList.add("in"), 500);
+        setTimeout(() => element.classList.remove("in"), 2000);
       }
       if (meter === "time") {
         document.getElementById(meter).classList.add("shake-horizontal");
@@ -1897,10 +1899,16 @@ const updateMeters = function () {
           () => document.getElementById(meter).classList.remove("shake-horizontal"),
           400
         );
+        setTimeout(() => {
+          element.getElementsByTagName("span")[0].remove();
+          var elem = document.createElement("span");
+          elem.innerText = latest[meter].toFixed(2);
+          element.prepend(elem);
+        }, 500);
+        setTimeout(() => element.classList.add("in"), 500);
+        setTimeout(() => element.classList.remove("in"), 2000);
       }
-      setTimeout(() => element.classList.add("in"), 500);
-      setTimeout(() => ({ [meter]: element.innerText } = latest), 500);
-      setTimeout(() => element.classList.remove("in"), 2000);
+
     }
   });
 }
@@ -1937,9 +1945,8 @@ const resetGameState = function () {
 const restart = function () {
   resetGameState();
   // reset welcome screen
-  welcomeElement.classList.remove("out");
-  toggleHide(welcomeElement, backgroundElement);
-  welcomeElement.classList.remove("in");
+  toggleHide(intro3Element);
+  intro3Element.classList.remove("in");
   // settle class list, hide for the elements in the list
   elements.forEach((e) => {
     e.classList.remove("in");
