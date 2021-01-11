@@ -737,7 +737,7 @@ const playerBTextNodes = [
   },
   {
     id: 7.2,
-    text: `If you pay for normal laptop repairs,
+    text: `<i>If you pay for normal laptop repairs,</i><br/>
 
     <bold>Your time decreases.</bold> 
     The laptop repair specialists are busy working on emergency repairs, and can only consider your case after that.<br/><br/>
