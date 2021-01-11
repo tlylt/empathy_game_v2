@@ -770,7 +770,7 @@ const playerBTextNodes = [
     id: 8.1,
     text: `Congratulations, you have completed your goals.
 
-    However, it is worth keeping in mind that not everybody has the resources to do so. Try repeating this exercise as a different colour and see for yourself.
+    However, it is worth keeping in mind that not everybody has the resources to do so. Try repeating this exercise as a different player and see for yourself.
     `,
     options: [
       {
@@ -829,7 +829,7 @@ const playerCTextNodes = [
   },
   {
     id: 1.1,
-    text: `<i>By waking up at 5:30am,</i><br/>
+    text: `<i>By waking up at 6:00am,</i><br/>
 
     <bold>Your time decreases.</bold>
     Although you wake up early, you have to spend this time doing chores and therefore have less time to do your own tasks.
@@ -1094,7 +1094,7 @@ const playerCTextNodes = [
     text: `<i>By making them a handmade card,</i><br/>
 
     <bold>Your time decreases.</bold>
-    You have to spend time not only making the card, but buying the supplies you need in order to do so.<br/><br/>
+    You have to spend time not only making the card, but gathering the supplies you need in order to do so.<br/><br/>
 
     <bold>Your money stays the same.</bold>   
     `,
@@ -1234,7 +1234,7 @@ const playerCTextNodes = [
     id: 10.1,
     text: `Congratulations, you have completed your goals.
 
-    However, it is worth keeping in mind that not everybody has the resources to do so. Try repeating this exercise as a different colour and see for yourself.
+    However, it is worth keeping in mind that not everybody has the resources to do so. Try repeating this exercise as a different player and see for yourself.
     `,
     options: [
       {
@@ -1805,7 +1805,7 @@ const showTextNode = function (textNodeIndex) {
     button.classList.add("in");
     if (option.text === "Yes") {
       const { [record.length - 1]: latest } = record;
-      if (latest["wealth"] < 100 || latest["time"] < 1) {
+      if (latest["wealth"] < 100 || latest["time"] < 0.5) {
         console.log("lose!!")
         button.disabled = true;
         button.style.border = "none";
