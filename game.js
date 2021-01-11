@@ -49,7 +49,7 @@ const playerATextNodes = [
   },
   {
     id: 1.1,
-    text: `By sleeping in till 7:00am,
+    text: `<i>By sleeping in till 7:00am,</i><br/>
 
     Nothing happens! You wake up well-rested and not having taken any extra time out of your day. 
     `,
@@ -62,9 +62,9 @@ const playerATextNodes = [
   },
   {
     id: 1.2,
-    text: `By waking up at 6:30am,
+    text: `<i>By waking up at 6:30am,</i><br/>
     
-    Your time increases.
+    <bold>Your time increases.</bold>
     You are able to get some personal tasks done and clear more time in your schedule for your university application.
     `,
     options: [
@@ -92,12 +92,12 @@ const playerATextNodes = [
   },
   {
     id: 2.1,
-    text: `By eating a full breakfast,
+    text: `<i>By eating a full breakfast,</i><br/>
 
-    Your time decreases. 
-    Eating a full breakfast takes time but keeps you healthy. Luckily, you did not have to prepare it yourself! 
+    <bold>Your time decreases.</bold>
+    Eating a full breakfast takes time but keeps you healthy. Luckily, you did not have to prepare it yourself!<br/><br/>  
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     Your family needs to pay your domestic helper’s salary, therefore decreasing the amount available for your allowance.
     `,
     options: [
@@ -109,9 +109,9 @@ const playerATextNodes = [
   },
   {
     id: 2.2,
-    text: `By eating a smaller breakfast,
+    text: `<i>By eating a smaller breakfast,</i><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     You have to pay for your morning snack out of pocket, reducing the amount of money you have left. 
     `,
     options: [
@@ -140,12 +140,12 @@ const playerATextNodes = [
   },
   {
     id: 3.1,
-    text: `By being driven to school,
+    text: `<i>By being driven to school,</i><br/>
 
-    Your time decreases. 
-    It’s a very short drive and therefore you skip most of the morning traffic.
+    <bold>Your time decreases.</bold> 
+    It’s a very short drive and therefore you skip most of the morning traffic.<br/><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     Your family needs to pay your chauffeur’s salary, therefore decreasing the amount available for your allowance. 
     `,
     options: [
@@ -157,12 +157,12 @@ const playerATextNodes = [
   },
   {
     id: 3.2,
-    text: `By taking the school bus to school,
+    text: `<i>By taking the school bus to school,</i><br/>
 
-    Your time decreases. 
-    The school bus makes several stops to pick up all the students, so takes a little extra time.
+    <bold>Your time decreases.</bold> 
+    The school bus makes several stops to pick up all the students, so takes a little extra time.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     Your parents paid a fee to the bus chartering company in order to get you a seat on the school bus. 
     `,
     options: [
@@ -190,12 +190,12 @@ const playerATextNodes = [
   },
   {
     id: 4.1,
-    text: `By calling your violin teacher,
+    text: `<i>By calling your violin teacher,</i><br/>
 
-    Your time stays the same.
-    Your violin teacher is an expert and chooses the instrument on your behalf, taking up on time of your own.
+    <bold>Your time stays the same.</bold>
+    Your violin teacher is an expert and chooses the instrument on your behalf, taking up on time of your own.<br/><br/>
     
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     Thankfully, you are able to afford the highest quality violin on offer, but it comes at a price. 
     `,
     options: [
@@ -207,12 +207,12 @@ const playerATextNodes = [
   },
   {
     id: 4.2,
-    text: `By researching second-hand violins,
+    text: `<i>By researching second-hand violins,</i><br/>
 
-    Your time decreases. 
-    You have to compare multiple different instruments in a range of different ways, and it takes some time to make the correct decision.
+    <bold>Your time decreases.</bold> 
+    You have to compare multiple different instruments in a range of different ways, and it takes some time to make the correct decision.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You are able to purchase a second-hand violin at a fraction of the price of a new one.
     `,
     options: [
@@ -240,12 +240,12 @@ const playerATextNodes = [
   },
   {
     id: 5.1,
-    text: `By calling your private tutor,
+    text: `<i>By calling your private tutor,</i><br/>
 
-    Your time decreases. 
-    Though it takes some time for you to eventually understand the work, your tutor is able to work with you on your specific questions without being distracted by other students.
+    <bold>Your time decreases.</bold> 
+    Though it takes some time for you to eventually understand the work, your tutor is able to work with you on your specific questions without being distracted by other students.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You have to compensate your private tutor for your time, and at a relatively high price given their qualifications and because they are not teaching anybody else.
     `,
     options: [
@@ -257,12 +257,12 @@ const playerATextNodes = [
   },
   {
     id: 5.2,
-    text: `By going to a tuition centre, 
+    text: `<i>By going to a tuition centre,</i><br/>
 
-    Your time decreases.
-    You spend most of your evening doing homework, as the tutor also has to attend to other students.
+    <bold>Your time decreases.</bold>
+    You spend most of your evening doing homework, as the tutor also has to attend to other students.<br/><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     You have to pay the tuition centre for each session.
     `,
     options: [
@@ -290,12 +290,12 @@ const playerATextNodes = [
   },
   {
     id: 6.1,
-    text: `By making a restaurant reservation,
+    text: `<i>By making a restaurant reservation,</i><br/>
 
-    Your time stays the same.
-    You are able to get them a gift almost instantly and have more time left for the rest of your tasks.
+    <bold>Your time stays the same.</bold>
+    You are able to get them a gift almost instantly and have more time left for the rest of your tasks.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You use some of your allowance to make a deposit at the restaurant, as is necessary when placing a reservation. 
     `,
     options: [
@@ -307,12 +307,12 @@ const playerATextNodes = [
   },
   {
     id: 6.2,
-    text: `By buying them a video game,
+    text: `<i>By buying them a video game,</i><br/>
 
-    Your time stays the same.
-    You are able to order the gift online and don’t have to visit the store to do so. 
+    <bold>Your time stays the same.</bold>
+    You are able to order the gift online and don’t have to visit the store to do so.<br/><br/> 
     
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You have to pay for premium shipping in order to get the gift on time, which increases the cost. 
     `,
     options: [
@@ -340,9 +340,9 @@ const playerATextNodes = [
   },
   {
     id: 7.1,
-    text: `If you use the spare desktop computer,
+    text: `<i>If you use the spare desktop computer,</i><br/>
 
-    Your time decreases. 
+    <bold>Your time decreases.</bold> 
     `,
     options: [
       {
@@ -354,12 +354,12 @@ const playerATextNodes = [
   },
   {
     id: 7.2,
-    text: `If you pay for emergency laptop repairs,
+    text: `<i>If you pay for emergency laptop repairs,</i><br/>
 
-    Your time decreases.
-    You still need to go to the repair shop and wait for them to find and solve the issue.
+    <bold>Your time decreases.</bold>
+    You still need to go to the repair shop and wait for them to find and solve the issue.<br/><br/>
     
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     Getting a laptop repaired quickly costs you more than it would otherwise. 
     `,
     options: [
@@ -447,9 +447,9 @@ const playerBTextNodes = [
   },
   {
     id: 1.1,
-    text: `By waking up at 6:30am, 
+    text: `<i>By waking up at 6:30am,</i><br/> 
 
-    Your time decreases.
+    <bold>Your time decreases.</bold>
     You have to help your sibling wake up and get ready for school, which reduces the amount of time you have available for other tasks.      
     `,
     options: [
@@ -477,10 +477,10 @@ const playerBTextNodes = [
   },
   {
     id: 2.1,
-    text: `By making yourself toast and butter,
+    text: `<i>By making yourself toast and butter,</i><br/>
 
-    Your time decreases. 
-    Your money decreases.
+    <bold>Your time decreases.</bold><br/>
+    <bold>Your money decreases.</bold>
     `,
     options: [
       {
@@ -491,9 +491,9 @@ const playerBTextNodes = [
   },
   {
     id: 2.2,
-    text: `By eating a smaller breakfast,
+    text: `<i>By eating a smaller breakfast,</i><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     You have to pay for your morning snack out of pocket, reducing the amount of money you have left.     
     `,
     options: [
@@ -522,12 +522,12 @@ const playerBTextNodes = [
   },
   {
     id: 3.1,
-    text: `By taking the school bus to school,
+    text: `<i>By taking the school bus to school,</i><br/>
 
-    Your time decreases. 
-    The school bus makes several stops to pick up all the students, so takes a little extra time.
+    <bold>Your time decreases.</bold> 
+    The school bus makes several stops to pick up all the students, so takes a little extra time.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     Your parents paid a fee to the bus chartering company in order to get you a seat on the school bus.    
     `,
     options: [
@@ -539,12 +539,12 @@ const playerBTextNodes = [
   },
   {
     id: 3.2,
-    text: `By taking the MRT and bus to school,
+    text: `<i>By taking the MRT and bus to school,</i><br/>
     
-    Your time decreases.
-    You lose time due to having to wait for a train with space, and morning traffic on the bus. 
+    <bold>Your time decreases.</bold>
+    You lose time due to having to wait for a train with space, and morning traffic on the bus.<br/><br/> 
     
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     `,
     options: [
       {
@@ -571,12 +571,12 @@ const playerBTextNodes = [
   },
   {
     id: 4.1,
-    text: `By renting a violin,
+    text: `<i>By renting a violin,</i><br/>
 
-    Your time decreases.
-    You still have to travel to and from the rental shop.
+    <bold>Your time decreases.</bold>
+    You still have to travel to and from the rental shop.<br/><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     You have to pay the rental price, but this is cheaper than having to buy a violin.     
     `,
     options: [
@@ -588,12 +588,12 @@ const playerBTextNodes = [
   },
   {
     id: 4.2,
-    text: `By researching second-hand violins,
+    text: `<i>By researching second-hand violins,</i><br/>
 
-    Your time decreases. 
-    You have to compare multiple different instruments in a range of different ways, and it takes some time to make the correct decision.
+    <bold>Your time decreases.</bold> 
+    You have to compare multiple different instruments in a range of different ways, and it takes some time to make the correct decision.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You are able to purchase a second-hand violin at a fraction of the price of a new one. 
     `,
     options: [
@@ -621,12 +621,12 @@ const playerBTextNodes = [
   },
   {
     id: 5.1,
-    text: `By going to a tuition centre, 
+    text: `<i>By going to a tuition centre,</i><br/> 
 
-    Your time decreases.
-    You spend most of your evening doing homework, as the tutor also has to attend to other students.
+    <bold>Your time decreases.</bold>
+    You spend most of your evening doing homework, as the tutor also has to attend to other students.<br/><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     You have to pay the tuition centre for each session.
     `,
     options: [
@@ -638,11 +638,11 @@ const playerBTextNodes = [
   },
   {
     id: 5.2,
-    text: `By going to a cafe,
+    text: `<i>By going to a cafe,</i><br/>
 
-    Your time decreases. 
+    <bold>Your time decreases.</bold><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You have to pay for drinks and food at the cafe in order to keep your seat there.`,
     options: [
       {
@@ -669,12 +669,12 @@ const playerBTextNodes = [
   },
   {
     id: 6.1,
-    text: `By buying them a video game,
+    text: `<i>By buying them a video game,</i><br/>
 
-    Your time stays the same.
-    You are able to order the gift online and don’t have to visit the store to do so. 
+    <bold>Your time stays the same.</bold>
+    You are able to order the gift online and don’t have to visit the store to do so.<br/><br/> 
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You have to pay for premium shipping in order to get the gift on time, which increases the cost. 
     `,
     options: [
@@ -686,12 +686,12 @@ const playerBTextNodes = [
   },
   {
     id: 6.2,
-    text: `By buying them a book voucher,
+    text: `<i>By buying them a book voucher,</i><br/>
 
-    Your time stays the same. 
-    You are able to order the gift online and don’t have to visit the store to do so.
+    <bold>Your time stays the same.</bold> 
+    You are able to order the gift online and don’t have to visit the store to do so.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You only have to contribute your share of the present.     
     `,
     options: [
@@ -719,12 +719,12 @@ const playerBTextNodes = [
   },
   {
     id: 7.1,
-    text: `If you pay for emergency laptop repairs,
+    text: `<i>If you pay for emergency laptop repairs,</i><br/>
 
-    Your time decreases.
-    You still need to go to the repair shop and wait for them to find and solve the issue.
+    <bold>Your time decreases.</bold>
+    You still need to go to the repair shop and wait for them to find and solve the issue.<br/><br/>
     
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     Getting a laptop repaired quickly costs you more than it would otherwise.     
     `,
     options: [
@@ -739,10 +739,10 @@ const playerBTextNodes = [
     id: 7.2,
     text: `If you pay for normal laptop repairs,
 
-    Your time decreases. 
-    The laptop repair specialists are busy working on emergency repairs, and can only consider your case after that.
+    <bold>Your time decreases.</bold> 
+    The laptop repair specialists are busy working on emergency repairs, and can only consider your case after that.<br/><br/>
 
-    Your money decreases.    
+    <bold>Your money decreases.</bold>    
     `,
     options: [
       {
@@ -829,9 +829,9 @@ const playerCTextNodes = [
   },
   {
     id: 1.1,
-    text: `By waking up at 5:30am,
+    text: `<i>By waking up at 5:30am,</i><br/>
 
-    Your time decreases.
+    <bold>Your time decreases.</bold>
     Although you wake up early, you have to spend this time doing chores and therefore have less time to do your own tasks.
     `,
     options: [
@@ -859,9 +859,9 @@ const playerCTextNodes = [
   },
   {
     id: 2.1,
-    text: `By making lunch and eating leftovers,
+    text: `<i>By making lunch and eating leftovers,</i><br/>
 
-    Your time decreases.
+    <bold>Your time decreases.</bold>
     You have to cook and pack the food, and clean up the kitchen. 
     `,
     options: [
@@ -873,12 +873,12 @@ const playerCTextNodes = [
   },
   {
     id: 2.2,
-    text: `By eating subsidised meals at school,
+    text: `<i>By eating subsidised meals at school,</i><br/>
 
-    Your time decreases.
-    You have to get to school early in order to receive food before it runs out.
+    <bold>Your time decreases.</bold>
+    You have to get to school early in order to receive food before it runs out.<br/><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     Although meals at school are subsidised, they are not entirely free.    
     `,
     options: [
@@ -907,12 +907,12 @@ const playerCTextNodes = [
   },
   {
     id: 3.1,
-    text: `By taking the MRT and bus to school,
+    text: `<i>By taking the MRT and bus to school,</i><br/>
 
-    Your time decreases. 
-    You lose time due to having to wait for a train with space, and enduring morning traffic on the bus. 
+    <bold>Your time decreases.</bold> 
+    You lose time due to having to wait for a train with space, and enduring morning traffic on the bus.<br/><br/>
 
-    Your money decreases.     
+    <bold>Your money decreases.</bold>     
     `,
     options: [
       {
@@ -923,9 +923,9 @@ const playerCTextNodes = [
   },
   {
     id: 3.2,
-    text: `By walking to school,
+    text: `<i>By walking to school,</i><br/>
 
-    Your time decreases. 
+    <bold>Your time decreases.</bold> 
     `,
     options: [
       {
@@ -952,9 +952,9 @@ const playerCTextNodes = [
   },
   {
     id: 4.1,
-    text: `By reaching out to a charity,
+    text: `<i>By reaching out to a charity,</i><br/>
 
-    Your time decreases.
+    <bold>Your time decreases.</bold>
     You need to fill out a considerable amount of paperwork and then maintain communication with a charity officer to process your application.    
     `,
     options: [
@@ -966,12 +966,12 @@ const playerCTextNodes = [
   },
   {
     id: 4.2,
-    text: `By renting a violin,
+    text: `<i>By renting a violin,</i><br/>
 
-    Your time decreases.
-    You still have to travel to and from the rental shop.
+    <bold>Your time decreases.</bold>
+    You still have to travel to and from the rental shop.<br/><br/>
 
-    Your money decreases. 
+    <bold>Your money decreases.</bold> 
     You have to pay the rental price, but this is cheaper than having to buy a violin. 
     `,
     options: [
@@ -998,12 +998,12 @@ const playerCTextNodes = [
   },
   {
     id: 5.1,
-    text: `By studying at the local library,
+    text: `<i>By studying at the local library,</i><br/>
 
-    Your time decreases.
-    The library is crowded at this time of day and you need to find a seat and the books you require.
+    <bold>Your time decreases.</bold>
+    The library is crowded at this time of day and you need to find a seat and the books you require.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You have some overdue fines and need to pay them off before being allowed to borrow new books.
     `,
     options: [
@@ -1015,7 +1015,7 @@ const playerCTextNodes = [
   },
   {
     id: 5.2,
-    text: `By going home to study,
+    text: `<i>By going home to study,</i><br/>
 
     You realise there are other pressing priorities at home.
     `,
@@ -1044,12 +1044,12 @@ const playerCTextNodes = [
   },
   {
     id: 6.1,
-    text: `By taking your grandparent to the clinic,
+    text: `<i>By taking your grandparent to the clinic,</i><br/>
 
-    Your time decreases.
-    You will have to wait with your grandparent until they can get an appointment, and help them communicate with the doctor.
+    <bold>Your time decreases.</bold>
+    You will have to wait with your grandparent until they can get an appointment, and help them communicate with the doctor.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You need to pay a consultation fee in addition to the cost of the medication.
     `,
     options: [
@@ -1061,9 +1061,9 @@ const playerCTextNodes = [
   },
   {
     id: 6.2,
-    text: `By not taking your grandparent to the clinic,
+    text: `<i>By not taking your grandparent to the clinic,</i><br/>
 
-    Your time decreases. 
+    <bold>Your time decreases.</bold> 
     You will have to look after your siblings because your grandparent is too unwell to do so. 
     `,
     options: [
@@ -1091,12 +1091,12 @@ const playerCTextNodes = [
   },
   {
     id: 7.1,
-    text: `By making them a handmade card,
+    text: `<i>By making them a handmade card,</i><br/>
 
-    Your time decreases.
-    You have to spend time not only making the card, but buying the supplies you need in order to do so.
+    <bold>Your time decreases.</bold>
+    You have to spend time not only making the card, but buying the supplies you need in order to do so.<br/><br/>
 
-    Your money stays the same.    
+    <bold>Your money stays the same.</bold>   
     `,
     options: [
       {
@@ -1107,12 +1107,12 @@ const playerCTextNodes = [
   },
   {
     id: 7.2,
-    text: `By buying them a book voucher,
+    text: `<i>By buying them a book voucher,</i><br/>
 
-    Your time stays the same. 
-    You are able to order the gift online and don’t have to visit the store to do so.
+    <bold>Your time stays the same.</bold> 
+    You are able to order the gift online and don’t have to visit the store to do so.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     You only have to contribute your share of the present. 
     `,
     options: [
@@ -1140,12 +1140,12 @@ const playerCTextNodes = [
   },
   {
     id: 8.1,
-    text: `If you pick up food from the hawker centre,
+    text: `<i>If you pick up food from the hawker centre,</i><br/>
 
-    Your time decreases.
-    Hawker centre food is ready to eat but also crowded at this time of day.
+    <bold>Your time decreases.</bold>
+    Hawker centre food is ready to eat but also crowded at this time of day.<br/><br/>
 
-    Your money decreases.
+    <bold>Your money decreases.</bold>
     `,
     options: [
       {
@@ -1156,12 +1156,12 @@ const playerCTextNodes = [
   },
   {
     id: 8.2,
-    text: `If you work a shift at a fast-food restaurant,
+    text: `<i>If you work a shift at a fast-food restaurant,</i><br/>
 
-    Your time decreases.
-    Shifts are a fixed interval of time and you cannot negotiate these.
+    <bold>Your time decreases.</bold>
+    Shifts are a fixed interval of time and you cannot negotiate these.<br/><br/>
 
-    Your money increases.
+    <bold>Your money increases.</bold>
     `,
     options: [
       {
@@ -1188,9 +1188,9 @@ const playerCTextNodes = [
   },
   {
     id: 9.1,
-    text: `By going back to the library,
+    text: `<i>By going back to the library,</i><br/>
 
-    Your time decreases. 
+    <bold>Your time decreases.</bold> 
     You have to find a way of getting back to the library, finding an available computer and getting your work done before closing time.
     `,
     options: [
@@ -1203,9 +1203,9 @@ const playerCTextNodes = [
   },
   {
     id: 9.2,
-    text: `By reaching out to a charity,
+    text: `<i>By reaching out to a charity,</i><br/>
 
-    Your time decreases. 
+    <bold>Your time decreases.</bold> 
     Charity staff are only available during working hours and will need time to process your application.
     `,
     options: [
@@ -1323,7 +1323,7 @@ const TerryTextNodes = [
   },
   {
     id: 1.1,
-    text: `By walking home to take your mask,
+    text: `<i>By walking home to take your mask,
 
     Your health points decrease.
 
@@ -1339,7 +1339,7 @@ const TerryTextNodes = [
   },
   {
     id: 1.2,
-    text: `By going to the nearest convenience store to buy a mask,
+    text: `<i>By going to the nearest convenience store to buy a mask,
 
     Your health points decrease.
     Talking to the person for 30 minutes unprotected and walking to the nearest convenience store without a mask automatically makes you more vulnerable to the virus.
@@ -1379,7 +1379,7 @@ const TerryTextNodes = [
 
   {
     id: 2.1,
-    text: `By depending on your savings and CPF payouts,
+    text: `<i>By depending on your savings and CPF payouts,
 
     Your payday value will decrease from here on.`,
     options: [
@@ -1392,7 +1392,7 @@ const TerryTextNodes = [
   },
   {
     id: 2.2,
-    text: `By going out to find a job,
+    text: `<i>By going out to find a job,
 
     Your health points decrease.
     With increased exposure to the virus in public spaces coupled with your age, you are more vulnerable to the virus.
@@ -1441,7 +1441,7 @@ const TerryTextNodes = [
   },
   {
     id: 3.1,
-    text: `By going out to meet your friends,
+    text: `<i>By going out to meet your friends,
     
     Your social points increase.
     You are able to interact with more people.
@@ -1459,7 +1459,7 @@ const TerryTextNodes = [
   },
   {
     id: 3.2,
-    text: `By staying home,
+    text: `<i>By staying home,
 
     Your social points decrease.
     You missed the chance to meet with your friends.
@@ -1495,7 +1495,7 @@ const TerryTextNodes = [
   },
   {
     id: 4.1,
-    text: `By actively learning how to use these platforms,
+    text: `<i>By actively learning how to use these platforms,
 
     Your social points increase.
     After learning how to use the computer, you will be able to connect with your friends online.
@@ -1510,7 +1510,7 @@ const TerryTextNodes = [
   },
   {
     id: 4.2,
-    text: `By dismissing the idea of using these platforms,
+    text: `<i>By dismissing the idea of using these platforms,
 
     Your social points decrease.
     You are unable to connect with your friends.    
@@ -1556,7 +1556,7 @@ const TerryTextNodes = [
   },
   {
     id: 5.1,
-    text: `By continuing to apply for a less-risky job, 
+    text: `<i>By continuing to apply for a less-risky job, 
     
     Your wealth points decrease.
     Your savings continue to deplete as your expenses increase.
@@ -1573,7 +1573,7 @@ const TerryTextNodes = [
   },
   {
     id: 5.2,
-    text: `By choosing to apply for a job as a cleaner,
+    text: `<i>By choosing to apply for a job as a cleaner,
     
     Your wealth points increase.
     The temporary job is able to cover the increase in costs of living.
@@ -1789,7 +1789,7 @@ const showTextNode = function (textNodeIndex) {
   const textNode = currentStory.find(
     (textNode) => textNode.id === textNodeIndex
   );
-  ({ text: contentTextElement.innerText } = textNode);
+  ({ text: contentTextElement.innerHTML } = textNode);
 
   while (contentOptionsElement.firstChild) {
     // remove all previous options
@@ -1933,6 +1933,9 @@ const selectOption = function (option) {
   record.push(newState);
   showTextNode(nextTextNodeId);
   updateMeters();
+  if (newState["time"] <= 0) {
+    setTimeout(goGameOverScene, 1000);
+  }
 }
 
 const resetGameState = function () {
