@@ -845,7 +845,8 @@ body {
 }
 
 .btn:hover,
-.mySlides img {
+.mySlides img,
+#credit img {
   cursor: url(assets/cursors/curhand.cur), auto !important;
 }
 
