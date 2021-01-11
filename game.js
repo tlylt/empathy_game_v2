@@ -1933,7 +1933,7 @@ const selectOption = function (option) {
   record.push(newState);
   showTextNode(nextTextNodeId);
   updateMeters();
-  if (newState["time"] <= 0) {
+  if (newState["time"] <= 0 && nextTextNodeId !== -1) {
     setTimeout(goGameOverScene, 1000);
   }
 }
