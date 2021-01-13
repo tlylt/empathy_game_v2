@@ -1031,3 +1031,11 @@ body {
     opacity: 0;
   }
 }
+
+/* mobile fullscreen stuff */
+@media all and (max-width: 450px) and (min-height: 320px) {
+  #fullscreenHint {
+    display: none;
+    visibility: hidden;
+  }
+}

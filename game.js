@@ -8,7 +8,42 @@ if ("serviceWorker" in navigator) {
     console.log(error);
   });
 }
+// Full Screen
+const fullscreenHintElement = document.getElementById('fullscreenHint');
+const toggleFullScreen = () => {
+  if (!document.fullscreenElement) {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+      fullscreenHintElement.classList.add('hide');
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    }
+    else if (document.documentElement.webkitRequestFullScreen) {
+      document.documentElement.webkitRequestFullScreen();
+    }
+    else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    }
 
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    }
+    else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+    else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  }
+}
+document.addEventListener("keypress", (e) => {
+  if (e.key === 'Enter') {
+    toggleFullScreen();
+  }
+}, false);
 // Game internal state
 let state;
 let record;
