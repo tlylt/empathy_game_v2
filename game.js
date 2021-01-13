@@ -129,7 +129,7 @@ const playerATextNodes = [
     id: 2.1,
     text: `<i>By eating a full breakfast,</i><br/>
 
-    <bold>Your time decreases.</bold>
+    <bold>Your time slightly decreases.</bold>
     Eating a full breakfast takes time but keeps you healthy. Luckily, you did not have to prepare it yourself!<br/><br/>  
 
     <bold>Your money decreases.</bold>
@@ -146,7 +146,7 @@ const playerATextNodes = [
     id: 2.2,
     text: `<i>By eating a smaller breakfast,</i><br/>
 
-    <bold>Your money decreases.</bold> 
+    <bold>Your money slightly decreases.</bold> 
     You have to pay for your morning snack out of pocket, reducing the amount of money you have left. 
     `,
     options: [
@@ -177,7 +177,7 @@ const playerATextNodes = [
     id: 3.1,
     text: `<i>By being driven to school,</i><br/>
 
-    <bold>Your time decreases.</bold> 
+    <bold>Your time slightly decreases.</bold> 
     It’s a very short drive and therefore you skip most of the morning traffic.<br/><br/>
 
     <bold>Your money decreases.</bold> 
@@ -230,7 +230,7 @@ const playerATextNodes = [
     <bold>Your time stays the same.</bold>
     Your violin teacher is an expert and chooses the instrument on your behalf, taking up on time of your own.<br/><br/>
     
-    <bold>Your money decreases.</bold> 
+    <bold>Your money sharply decreases.</bold> 
     Thankfully, you are able to afford the highest quality violin on offer, but it comes at a price. 
     `,
     options: [
@@ -280,7 +280,7 @@ const playerATextNodes = [
     <bold>Your time decreases.</bold> 
     Though it takes some time for you to eventually understand the work, your tutor is able to work with you on your specific questions without being distracted by other students.<br/><br/>
 
-    <bold>Your money decreases.</bold>
+    <bold>Your money sharply decreases.</bold>
     You have to compensate your private tutor for your time, and at a relatively high price given their qualifications and because they are not teaching anybody else.
     `,
     options: [
@@ -294,7 +294,7 @@ const playerATextNodes = [
     id: 5.2,
     text: `<i>By going to a tuition centre,</i><br/>
 
-    <bold>Your time decreases.</bold>
+    <bold>Your time significantly decreases.</bold>
     You spend most of your evening doing homework, as the tutor also has to attend to other students.<br/><br/>
 
     <bold>Your money decreases.</bold> 
@@ -377,7 +377,7 @@ const playerATextNodes = [
     id: 7.1,
     text: `<i>If you use the spare desktop computer,</i><br/>
 
-    <bold>Your time decreases.</bold> 
+    <bold>Your time significantly decreases.</bold> 
     `,
     options: [
       {
@@ -394,7 +394,7 @@ const playerATextNodes = [
     <bold>Your time decreases.</bold>
     You still need to go to the repair shop and wait for them to find and solve the issue.<br/><br/>
     
-    <bold>Your money decreases.</bold>
+    <bold>Your money sharply decreases.</bold>
     Getting a laptop repaired quickly costs you more than it would otherwise. 
     `,
     options: [
