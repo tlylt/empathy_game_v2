@@ -22,7 +22,7 @@ const playerATextNodes = [
     wealth: 1000,
     profile: [
       1,
-      "Player A",
+      "Arthur",
       `<li>You are from a high-income family.</li>
       <li>You live in a landed property.</li>
       <li>Your father is a surgeon and your mother is a partner at a law firm. In addition to your parents, you also live with your retired grandmother, domestic helper, and two dogs.</li>`,
@@ -425,7 +425,7 @@ const playerBTextNodes = [
     wealth: 500,
     profile: [
       2,
-      "Player B",
+      "Belinda",
       `<li>You are from a middle-income family.</li>
       <li>You live in a condominium and share a bedroom.</li>
       <li>Your parents are both managers at an accounting company. In addition to your parents, you live with your younger sibling.</li>`,
@@ -807,7 +807,7 @@ const playerCTextNodes = [
     wealth: 100,
     profile: [
       3,
-      "Player C",
+      "Curtis",
       `<li>You are from a low-income family.</li>
       <li>You live in a rental one-room flat.</li>
       <li>Your father is a bus driver and your mother is a cleaner. In addition to your parents, you live with your 2 grandparents (who are also cleaners), and 2 younger siblings.</li>`,
