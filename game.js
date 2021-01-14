@@ -49,7 +49,7 @@ let state;
 let record;
 let newState;
 let currentStory;
-
+let currentCharacterElement;
 // Character 1
 const playerATextNodes = [
   {
@@ -1376,6 +1376,9 @@ const end4BtnElement = document.getElementById("end4-btn");
 const gameoverElement = document.getElementById("gameover");
 const gameoverBtnElement = document.getElementById("gameover-btn");
 const restartBtnElement = document.getElementById("restart-btn");
+const reselectElement = document.getElementById('reselect');
+const reselectBtnElement = document.getElementById('reselect-btn');
+
 // button interactions
 welcomeBtnElement.onclick = () => {
   welcomeElement.classList.add("out");
@@ -1395,6 +1398,11 @@ gameoverBtnElement.onclick = () => {
 restartBtnElement.onclick = () => {
   toggleHideWithoutIn(currProfile);
   toggleProfileBtn();
+  restart();
+};
+
+reselectBtnElement.onclick = () => {
+  toggleHideWithoutIn(currentCharacterElement, reselectElement);
   restart();
 };
 
@@ -1443,12 +1451,15 @@ const initCharacters = function () {
         toggleProfileBtn();
         startGame();
         toggleHide(element, contentElement);
+        toggleHideWithoutIn(reselectElement);
       };
 
       // for slideshow of characters
       const imgElement = document.querySelector(`.slideshow-container > div:nth-child(${item}) > img`);
       imgElement.onclick = () => {
         toggleHide(intro3Element);
+        toggleHideWithoutIn(reselectElement);
+        currentCharacterElement = element;
         element.classList.add("in");
         toggleHide(element);
         setInitialGameState(charShortNames[item - 1]);
