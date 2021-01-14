@@ -1375,7 +1375,7 @@ const end1BtnElement = document.getElementById("end1-btn");
 const end4BtnElement = document.getElementById("end4-btn");
 const gameoverElement = document.getElementById("gameover");
 const gameoverBtnElement = document.getElementById("gameover-btn");
-
+const restartBtnElement = document.getElementById("restart-btn");
 // button interactions
 welcomeBtnElement.onclick = () => {
   welcomeElement.classList.add("out");
@@ -1389,6 +1389,12 @@ credit1BtnElement.onclick = () => toggleHide(gameoverElement, creditElement);
 end4BtnElement.onclick = () => restart();
 gameoverBtnElement.onclick = () => {
   toggleHide(gameoverElement);
+  restart();
+};
+
+restartBtnElement.onclick = () => {
+  toggleHideWithoutIn(currProfile);
+  toggleProfileBtn();
   restart();
 };
 
