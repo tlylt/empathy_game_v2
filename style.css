@@ -906,6 +906,12 @@ body {
     width: 170px;
     min-height: 100px;
   }
+
+  #restart-btn,
+  #reselect-btn {
+    font-size: x-small;
+    padding: 2px;
+  }
 }
 .shake-horizontal {
   -webkit-animation: shake-horizontal 0.8s
