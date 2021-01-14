@@ -514,7 +514,7 @@ const playerBTextNodes = [
     id: 2.1,
     text: `<i>By making yourself toast and butter,</i><br/>
 
-    <bold>Your time decreases.</bold><br/>
+    <bold>Your time slightly decreases.</bold><br/>
     <bold>Your money decreases.</bold>
     `,
     options: [
@@ -528,6 +528,7 @@ const playerBTextNodes = [
     id: 2.2,
     text: `<i>By eating a smaller breakfast,</i><br/>
 
+    <bold>Your time stays the same.</bold><br/>
     <bold>Your money decreases.</bold> 
     You have to pay for your morning snack out of pocket, reducing the amount of money you have left.     
     `,
@@ -579,7 +580,7 @@ const playerBTextNodes = [
     <bold>Your time decreases.</bold>
     You lose time due to having to wait for a train with space, and morning traffic on the bus.<br/><br/> 
     
-    <bold>Your money decreases.</bold> 
+    <bold>Your money slightly decreases.</bold> 
     `,
     options: [
       {
@@ -658,7 +659,7 @@ const playerBTextNodes = [
     id: 5.1,
     text: `<i>By going to a tuition centre,</i><br/> 
 
-    <bold>Your time decreases.</bold>
+    <bold>Your time significantly decreases.</bold>
     You spend most of your evening doing homework, as the tutor also has to attend to other students.<br/><br/>
 
     <bold>Your money decreases.</bold> 
@@ -759,7 +760,7 @@ const playerBTextNodes = [
     <bold>Your time decreases.</bold>
     You still need to go to the repair shop and wait for them to find and solve the issue.<br/><br/>
     
-    <bold>Your money decreases.</bold>
+    <bold>Your money sharply decreases.</bold>
     Getting a laptop repaired quickly costs you more than it would otherwise.     
     `,
     options: [
@@ -896,7 +897,7 @@ const playerCTextNodes = [
     id: 2.1,
     text: `<i>By making lunch and eating leftovers,</i><br/>
 
-    <bold>Your time decreases.</bold>
+    <bold>Your time significantly decreases.</bold>
     You have to cook and pack the food, and clean up the kitchen. 
     `,
     options: [
@@ -913,7 +914,7 @@ const playerCTextNodes = [
     <bold>Your time decreases.</bold>
     You have to get to school early in order to receive food before it runs out.<br/><br/>
 
-    <bold>Your money decreases.</bold> 
+    <bold>Your money slightly decreases.</bold> 
     Although meals at school are subsidised, they are not entirely free.    
     `,
     options: [
@@ -947,7 +948,7 @@ const playerCTextNodes = [
     <bold>Your time decreases.</bold> 
     You lose time due to having to wait for a train with space, and enduring morning traffic on the bus.<br/><br/>
 
-    <bold>Your money decreases.</bold>     
+    <bold>Your money slightly decreases.</bold>     
     `,
     options: [
       {
@@ -960,7 +961,7 @@ const playerCTextNodes = [
     id: 3.2,
     text: `<i>By walking to school,</i><br/>
 
-    <bold>Your time decreases.</bold> 
+    <bold>Your time significantly decreases.</bold> 
     `,
     options: [
       {
@@ -989,7 +990,7 @@ const playerCTextNodes = [
     id: 4.1,
     text: `<i>By reaching out to a charity,</i><br/>
 
-    <bold>Your time decreases.</bold>
+    <bold>Your time significantly decreases.</bold>
     You need to fill out a considerable amount of paperwork and then maintain communication with a charity officer to process your application.    
     `,
     options: [
@@ -1038,7 +1039,7 @@ const playerCTextNodes = [
     <bold>Your time decreases.</bold>
     The library is crowded at this time of day and you need to find a seat and the books you require.<br/><br/>
 
-    <bold>Your money decreases.</bold>
+    <bold>Your money slightly decreases.</bold>
     You have some overdue fines and need to pay them off before being allowed to borrow new books.
     `,
     options: [
@@ -1081,10 +1082,10 @@ const playerCTextNodes = [
     id: 6.1,
     text: `<i>By taking your grandparent to the clinic,</i><br/>
 
-    <bold>Your time decreases.</bold>
+    <bold>Your time significantly decreases.</bold>
     You will have to wait with your grandparent until they can get an appointment, and help them communicate with the doctor.<br/><br/>
 
-    <bold>Your money decreases.</bold>
+    <bold>Your money sharply decreases.</bold>
     You need to pay a consultation fee in addition to the cost of the medication.
     `,
     options: [
@@ -1098,7 +1099,7 @@ const playerCTextNodes = [
     id: 6.2,
     text: `<i>By not taking your grandparent to the clinic,</i><br/>
 
-    <bold>Your time decreases.</bold> 
+    <bold>Your time significantly decreases.</bold> 
     You will have to look after your siblings because your grandparent is too unwell to do so. 
     `,
     options: [
@@ -1240,7 +1241,7 @@ const playerCTextNodes = [
     id: 9.2,
     text: `<i>By reaching out to a charity,</i><br/>
 
-    <bold>Your time decreases.</bold> 
+    <bold>Your time significantly decreases.</bold> 
     Charity staff are only available during working hours and will need time to process your application.
     `,
     options: [
@@ -1298,333 +1299,6 @@ const playerCTextNodes = [
     ]
   }
 ]
-
-// Terry
-const TerryTextNodes = [
-  {
-    health: 55,
-    wealth: 1000,
-    social: 40,
-    cpf: 1000,
-    allowance: 900,
-    expense: 900,
-    job: 0,
-    date: "10 April",
-    delay: false,
-    covid: false,
-    police: false,
-    family: false,
-    profile: [
-      1,
-      "Terry Ang Chee Boon, 73",
-      `<li>Retired</li>`,
-      `<li>Lives with wife</li>
-      <li>Has 2 children who provide a monthly allowance of $900</li>`,
-      `<li>
-      Lost touch with old friends, acquaintance with people in his
-      neighbourhood
-    </li>
-    <li>Spends most of his time with his wife</li>`,
-      ` <li>Early-onset dementia</li>
-      <li>Gout</li>`,
-      `<li>$1900 income: $1000 CPF payout, $900 allowance</li>
-      <li>
-        $900 expenses(including food, utilities, treatment,
-        entertainment)
-      </li>`
-    ],
-  },
-  {
-    id: 1,
-    text: `You went out of the house and forgot to wear your mask. 
-
-    Along the way, you realise that everyone is staring at you, but you are not sure why. 
-    Suddenly, someone comes up to you and says, "Hello uncle, you are not wearing your mask." 
-    It takes about 30 minutes of explaining before you recall why you need to wear a mask.
-    
-    You can either:`,
-    options: [
-      {
-        text: "Walk home and take your mask",
-        updateState: { health: -5, covid: true, police: true },
-        next: 1.1,
-      },
-      {
-        text: "Go to the nearest convenience store and buy a mask",
-        updateState: { health: -5, wealth: -25 },
-        next: 1.2,
-      },
-    ],
-  },
-  {
-    id: 1.1,
-    text: `<i>By walking home to take your mask,
-
-    Your health points decrease.
-
-    Talking to the person for 30 minutes unprotected and walking home without a mask automatically makes you more vulnerable to the virus. 
-    `,
-    options: [
-      {
-        text: "Continue",
-        next: 2,
-        updateState: { date: "26 April" },
-      },
-    ],
-  },
-  {
-    id: 1.2,
-    text: `<i>By going to the nearest convenience store to buy a mask,
-
-    Your health points decrease.
-    Talking to the person for 30 minutes unprotected and walking to the nearest convenience store without a mask automatically makes you more vulnerable to the virus.
-    
-    Your wealth decreases.
-    The store you go to only sells one type of disposable masks (50 pieces). You had to spend your limited finances on buying these masks.
-    `,
-    options: [
-      {
-        text: "Continue",
-        next: 2,
-        updateState: { date: "26 April" },
-      },
-    ],
-  },
-  {
-    id: 2,
-    text: `Your children inform you that they may be facing salary cuts at work.
-    
-    They inform you that they will not be able to give you as much allowance because they are struggling to cope with the financial situation as well.
-    
-    You can either:`,
-    options: [
-      {
-        text: `Depend on your savings and CPF retirement payouts. You will have a 
-        total of $700 per month as compared to the previous $1000`,
-        updateState: { allowance: -300 },
-        next: 2.1,
-      },
-      {
-        text: `Go and find a job.`,
-        updateState: { health: -15, allowance: -300, job: 200, delay: true },
-        next: 2.2,
-      },
-    ],
-  },
-
-  {
-    id: 2.1,
-    text: `<i>By depending on your savings and CPF payouts,
-
-    Your payday value will decrease from here on.`,
-    options: [
-      {
-        text: "Continue",
-        next: 2.3,
-        updateState: { payday: true, date: "1 May" },
-      },
-    ],
-  },
-  {
-    id: 2.2,
-    text: `<i>By going out to find a job,
-
-    Your health points decrease.
-    With increased exposure to the virus in public spaces coupled with your age, you are more vulnerable to the virus.
-
-    Your pay day value will increase from here on. 
-    Since you found a job, you are able to earn a greater income.
-    `,
-    options: [
-      {
-        text: "Continue",
-        next: 2.3,
-        updateState: { payday: true, date: "1 May" },
-      },
-    ],
-  },
-  {
-    id: 2.3,
-    text: `It's Pay Day!`,
-    options: [
-      {
-        text: "Continue",
-        updateState: { date: "5 May" },
-        next: 3,
-      },
-    ],
-  },
-  {
-    id: 3,
-    text: `Due to regulations, such as Circuit Breaker, you've been cooped up at home.
-
-    Not only do you miss your friends, but your dementia is deteriorating because of the lack of cognitive exercise.
-    
-    You can either:`,
-    options: [
-      {
-        text: `Go out and meet your friends to play mahjong`,
-        updateState: { social: 5, health: -10, covid: true, police: true, family: true },
-        next: 3.1,
-      },
-      {
-        text: `Stay at home`,
-        updateState: { social: -10 },
-        next: 3.2,
-      },
-    ],
-  },
-  {
-    id: 3.1,
-    text: `<i>By going out to meet your friends,
-    
-    Your social points increase.
-    You are able to interact with more people.
-
-    Your health points decrease.
-    Although meeting your friends is beneficial to your mental health and dementia, your old age causes you to be more vulnerable to the virus when you go out. Your health is more greatly affected by COVID-19.
-    `,
-    options: [
-      {
-        text: `Continue`,
-        next: 4,
-        updateState: { date: "18 May" },
-      },
-    ],
-  },
-  {
-    id: 3.2,
-    text: `<i>By staying home,
-
-    Your social points decrease.
-    You missed the chance to meet with your friends.
-    `,
-    options: [
-      {
-        text: "Continue",
-        next: 4,
-        updateState: { date: "18 May" },
-      },
-    ],
-  },
-  {
-    id: 4,
-    text: `In order to meet up with your friends more frequently in a legal manner, you think
-    about using web conferencing platforms such as Skype or Zoom. 
-    
-    But you have no idea how to use these platforms because you are digitally illiterate.
-    
-    You can either:`,
-    options: [
-      {
-        text: `Actively find ways to learn how to use the platforms, even though it is very difficult for you to understand them and you learn after a long time.`,
-        updateState: { social: 15, family: true },
-        next: 4.1,
-      },
-      {
-        text: `Dismiss the idea of using these platforms`,
-        updateState: { social: -10, family: true },
-        next: 4.2,
-      },
-    ],
-  },
-  {
-    id: 4.1,
-    text: `<i>By actively learning how to use these platforms,
-
-    Your social points increase.
-    After learning how to use the computer, you will be able to connect with your friends online.
-    `,
-    options: [
-      {
-        text: "Continue",
-        next: 4.3,
-        updateState: { payday: true, date: "1 June" },
-      },
-    ],
-  },
-  {
-    id: 4.2,
-    text: `<i>By dismissing the idea of using these platforms,
-
-    Your social points decrease.
-    You are unable to connect with your friends.    
-    `,
-    options: [
-      {
-        text: "Continue",
-        next: 4.3,
-        updateState: { payday: true, date: "1 June" },
-      },
-    ],
-  },
-  {
-    id: 4.3,
-    text: `It's Pay Day!`,
-    options: [
-      {
-        text: "Continue",
-        next: 5,
-        updateState: { date: "13 June" },
-      },
-    ],
-  },
-  {
-    id: 5,
-    text: `Circuit breaker has now ended. 
-    
-    To compensate for the increase in cost of living and cut in allowance, you decide to go and look for a job because your wife needs the money because she got into an accident. (disclaimer: if you currently have a job, you are taking on a second job) After multiple job applications, you are struggling to find a suitable job. The only job that is available requires you to clean at an MRT station at peak hours.
-    
-    You can either:`,
-    options: [
-      {
-        text: `Continue applying until you get a less-risky job`,
-        updateState: { wealth: -400, health: -7 },
-        next: 5.1,
-      },
-      {
-        text: `Apply for a job as a cleaner`,
-        updateState: { wealth: 800, health: -15, covid: true },
-        next: 5.2,
-      },
-    ],
-  },
-  {
-    id: 5.1,
-    text: `<i>By continuing to apply for a less-risky job, 
-    
-    Your wealth points decrease.
-    Your savings continue to deplete as your expenses increase.
-
-    Your health points decrease.
-    As you work in a less-risky job, your exposure to the virus is less, but still present. 
-    `,
-    options: [
-      {
-        text: `Continue`,
-        next: -1,
-      },
-    ],
-  },
-  {
-    id: 5.2,
-    text: `<i>By choosing to apply for a job as a cleaner,
-    
-    Your wealth points increase.
-    The temporary job is able to cover the increase in costs of living.
-
-    Your health points decrease.
-    The job increases the exposure risk to the virus.
-    `,
-    options: [
-      {
-        text: "Continue",
-        next: -1,
-      },
-    ],
-  },
-];
-
 
 // utility
 const toggleHide = (...elements) => {
