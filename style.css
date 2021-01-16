@@ -875,9 +875,9 @@ body {
 
   #restart-btn,
   #reselect-btn {
-    font-size: x-small;
+    /* font-size: x-small; */
     padding: 2px;
-    width: 50px;
+    /* width: 50px; */
   }
 }
 .shake-horizontal {

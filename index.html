@@ -65,6 +65,20 @@
   </head>
   <body>
     <div class="grid-container">
+      <div
+        id="reselect"
+        class="hide"
+        style="
+          align-self: center;
+          display: flex;
+          justify-content: center;
+          z-index: 1;
+        "
+      >
+        <div class="options">
+          <button id="reselect-btn" class="btn credit-btn">Reselect</button>
+        </div>
+      </div>
       <!-- header bar -->
       <div id="header" class="header hide" style="text-align: center">
         <div id="time">
@@ -401,23 +415,7 @@
           </button>
         </div>
       </div>
-      <div id="reselect" class="content hide">
-        <div class="options">
-          <button
-            id="reselect-btn"
-            class="btn"
-            style="
-              position: absolute;
-              align-self: center;
-              top: 6em;
-              width: 100px;
-              z-index: 1;
-            "
-          >
-            Reselect
-          </button>
-        </div>
-      </div>
+
       <!-- footer bar -->
       <div id="footer" class="footer">
         <div>
