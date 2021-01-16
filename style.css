@@ -877,6 +877,7 @@ body {
   #reselect-btn {
     font-size: x-small;
     padding: 2px;
+    width: 50px;
   }
 }
 .shake-horizontal {
