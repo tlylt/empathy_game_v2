@@ -123,9 +123,9 @@ body {
 
 .content .options.content-options {
   /* for 3 options layout  */
-  display: flex;
-  flex-wrap: wrap;
-  /* display: grid; */
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
   grid-area: options;
   align-self: center;
   column-gap: 1rem;
