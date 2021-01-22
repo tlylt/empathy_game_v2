@@ -1359,6 +1359,10 @@ const welcomeElement = document.getElementById("welcome");
 const welcomeBtnElement = document.getElementById("welcome-btn");
 const backgroundElement = document.getElementById("background");
 
+// survey
+const surveyElement = document.getElementById("survey");
+const surveyBtnElement = document.getElementById("survey-btn");
+
 // intro elements
 const intro1Element = document.getElementById("intro1");
 const intro1BtnElement = document.getElementById("intro1-btn");
@@ -1382,8 +1386,9 @@ const reselectBtnElement = document.getElementById('reselect-btn');
 // button interactions
 welcomeBtnElement.onclick = () => {
   welcomeElement.classList.add("out");
-  setTimeout(() => toggleHide(backgroundElement, welcomeElement, intro1Element), 1000);
+  setTimeout(() => toggleHide(backgroundElement, welcomeElement, surveyElement), 1000);
 };
+// surveyBtnElement.onclick = () => toggleHide(surveyElement, intro1Element);
 intro1BtnElement.onclick = () => toggleHide(intro1Element, intro2Element);
 intro2BtnElement.onclick = () => toggleHide(intro2Element, intro3Element);
 end1BtnElement.onclick = () => restart();
@@ -1474,6 +1479,7 @@ initCharacters();
 // display elements
 const elements = [
   headerElement,
+  surveyElement,
   intro1Element,
   intro2Element,
   creditElement,

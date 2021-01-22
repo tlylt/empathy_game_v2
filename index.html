@@ -149,6 +149,71 @@
         </div>
         <div class="img-background"></div>
       </div>
+      <div id="survey" class="content hide">
+        <div class="text" style="text-align: initial">
+          <form
+            class="gform"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbzDP8eTroS_ubFslZWFUIWc0KgBhvoOe4K3V_lpg3GOhWlzeXD0rGdJmA/exec"
+          >
+            <div class="form-elements">
+              <div style="width: min-content; margin: auto; text-align: start">
+                <p>Please select your gender:</p>
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  required
+                />
+                <label for="male">Male</label><br />
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label><br />
+                <p>Please select your age:</p>
+                <input
+                  type="radio"
+                  id="age1"
+                  name="age"
+                  value=" < 11"
+                  required
+                />
+                <label for="age1"> < 11</label><br />
+                <input type="radio" id="age2" name="age" value="11 - 16" />
+                <label for="age2">11 - 16</label><br />
+                <input type="radio" id="age3" name="age" value="16 - 20" />
+                <label for="age3">16 - 20</label><br />
+                <input type="radio" id="age4" name="age" value="21 - 25" />
+                <label for="age3">21 - 25</label><br />
+                <input type="radio" id="age5" name="age" value=" > 25" />
+                <label for="age3"> > 25</label><br />
+                <input type="radio" id="age5" name="age" value="undisclosed" />
+                <label for="age3">Prefer not to say</label><br />
+                <input
+                  type="text"
+                  style="display: none"
+                  name="game"
+                  value="youth"
+                />
+                <fieldset
+                  class="pure-group honeypot-field"
+                  style="visibility: hidden; height: 0px"
+                >
+                  <label for="honeypot"
+                    >To help avoid spam, utilize a Honeypot technique with a
+                    hidden text field; must be empty to submit the form!
+                    Otherwise, we assume the user is a spam bot.</label
+                  >
+                  <input id="honeypot" type="text" name="honeypot" value="" />
+                </fieldset>
+              </div>
+
+              <div class="options">
+                <button id="survey-btn" class="btn next-btn">Go</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
       <div id="intro1" class="content hide">
         <div class="text introBg1" style="text-align: initial">
           <h2>
@@ -501,5 +566,8 @@
       <li></li>
     </ul>
     <!-- end front page background animation -->
+    <!-- Submit the Form to Google Using "AJAX" -->
+    <script data-cfasync="false" src="form-submission-handler.js"></script>
+    <!-- END -->
   </body>
 </html>
