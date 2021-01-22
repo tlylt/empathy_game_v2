@@ -1556,7 +1556,7 @@ const showTextNode = function (textNodeIndex) {
     if (option.text === "No") {
 
       const { [record.length - 1]: latest } = record;
-      if (latest["wealth"] >= 100 && latest["time"] >= 1) {
+      if (latest["wealth"] >= 100 && latest["time"] >= 0.5) {
         console.log("win!!")
         button.disabled = true;
         button.style.border = "none";
