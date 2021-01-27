@@ -47,8 +47,20 @@
         return { data: formData, honeypot: honeypot };
     }
 
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
+
     function handleFormSubmit(event) {  // handles form submit without any jquery
         event.preventDefault();           // we are submitting via xhr below
+
+        // deal with gender input function
+
+        const result = escapeHtml(document.getElementById("self_describe").value);
+        document.getElementById("self_describe_radio").value = result;
+
         var form = event.target;
         var formData = getFormData(form);
         var data = formData.data;
@@ -81,7 +93,6 @@
         var forms = document.querySelectorAll("form.gform");
         for (var i = 0; i < forms.length; i++) {
             forms[i].addEventListener("submit", handleFormSubmit, false);
-
         }
     };
     document.addEventListener("DOMContentLoaded", loaded, false);
