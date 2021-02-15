@@ -116,10 +116,10 @@ const playerATextNodes = [
       {
         text: `A full breakfast - pancakes, juice and coffee made fresh by your domestic helper for the entire family.`,
         next: 2.1,
-        updateState: { time: -0.25, wealth: -50 },
+        updateState: { time: -0.25 },
       },
       {
-        text: `Nothing - you’ll pick up a snack on the way to school.`,
+        text: `Nothing - you'll buy a snack on the way to school.`,
         next: 2.2,
         updateState: { wealth: -10 },
       }
@@ -132,8 +132,8 @@ const playerATextNodes = [
     <bold>Your time slightly decreases.</bold>
     Eating a full breakfast takes time but keeps you healthy. Luckily, you did not have to prepare it yourself!<br/><br/>  
 
-    <bold>Your money decreases.</bold>
-    Your family needs to pay your domestic helper’s salary, therefore decreasing the amount available for your allowance.
+    <bold>Your money stays the same.</bold>
+    Your family pays your domestic helper’s salary.
     `,
     options: [
       {
@@ -158,18 +158,18 @@ const playerATextNodes = [
   },
   {
     id: 3,
-    text: `It’s time to go to school. How do you do this?`,
+    text: `It's time to go to school. How do you do this?`,
     options: [
       {
-        text: `Your family’s chauffeur drives you to school.`,
+        text: `Your family's chauffeur drives you to school, skipping the morning traffic.`,
         next: 3.1,
-        updateState: { time: -0.25, wealth: -80 },
+        updateState: { time: -0.25 },
 
       },
       {
-        text: `You take the school bus to school.`,
+        text: `You take the school bus to school: it takes a bit longer but you get to see your friends earlier.`,
         next: 3.2,
-        updateState: { time: -0.5, wealth: -40 },
+        updateState: { time: -0.5 },
       }
     ]
   },
@@ -180,8 +180,8 @@ const playerATextNodes = [
     <bold>Your time slightly decreases.</bold> 
     It’s a very short drive and therefore you skip most of the morning traffic.<br/><br/>
 
-    <bold>Your money decreases.</bold> 
-    Your family needs to pay your chauffeur’s salary, therefore decreasing the amount available for your allowance. 
+    <bold>Your money stays the same.</bold> 
+    Your family pays your chauffeur’s salary. 
     `,
     options: [
       {
@@ -197,7 +197,7 @@ const playerATextNodes = [
     <bold>Your time decreases.</bold> 
     The school bus makes several stops to pick up all the students, so takes a little extra time.<br/><br/>
 
-    <bold>Your money decreases.</bold>
+    <bold>Your money stays the same.</bold>
     Your parents paid a fee to the bus chartering company in order to get you a seat on the school bus. 
     `,
     options: [
@@ -212,14 +212,14 @@ const playerATextNodes = [
     text: `At school, you want to sign up for the orchestra CCA, but they require you to bring your own instrument. What do you do?`,
     options: [
       {
-        text: `Ask your parents to call your violin teacher, who will help you choose an instrument to buy.`,
+        text: `Ask your parents to call your violin teacher, who will instantly recommend a violin to you.`,
         next: 4.1,
-        updateState: { wealth: -200 },
+        updateState: {},
       },
       {
-        text: `Spend some time researching second-hand violins.`,
+        text: `Spend some time researching second-hand violins which may be less expensive.`,
         next: 4.2,
-        updateState: { time: -0.5, wealth: -80 },
+        updateState: { time: -0.5 },
       }
     ]
   },
@@ -230,8 +230,8 @@ const playerATextNodes = [
     <bold>Your time stays the same.</bold>
     Your violin teacher is an expert and chooses the instrument on your behalf, taking up on time of your own.<br/><br/>
     
-    <bold>Your money sharply decreases.</bold> 
-    Thankfully, you are able to afford the highest quality violin on offer, but it comes at a price. 
+    <bold>Your money stays the same.</bold> 
+    Thankfully, your parents are able to buy you the highest quality violin on offer, and pay your teacher for their assistance. 
     `,
     options: [
       {
@@ -247,8 +247,8 @@ const playerATextNodes = [
     <bold>Your time decreases.</bold> 
     You have to compare multiple different instruments in a range of different ways, and it takes some time to make the correct decision.<br/><br/>
 
-    <bold>Your money decreases.</bold>
-    You are able to purchase a second-hand violin at a fraction of the price of a new one.
+    <bold>Your money stays the same.</bold>
+    Your parents, impressed with your resourcefulness, buy you a second-hand violin at a fraction of the price of a new one.
     `,
     options: [
       {
@@ -262,14 +262,14 @@ const playerATextNodes = [
     text: `The school day is over and you need to spend some time catching up on homework. How do you solve this?`,
     options: [
       {
-        text: `Call your private tutor to come over to your house and explain it to you.`,
+        text: `Call your private tutor to come over to your house and explain it to you and quickly answer your specific questions.`,
         next: 5.1,
-        updateState: { time: -1.5, wealth: -150 },
+        updateState: { time: -1.5 },
       },
       {
-        text: `You go to a tuition centre like most of the students in your class.`,
+        text: `You go to a tuition centre like most of the students in your class, which takes a little longer but you get to learn with your friends.`,
         next: 5.2,
-        updateState: { time: -3, wealth: -60 },
+        updateState: { time: -3 },
       }
     ]
   },
@@ -280,8 +280,8 @@ const playerATextNodes = [
     <bold>Your time decreases.</bold> 
     Though it takes some time for you to eventually understand the work, your tutor is able to work with you on your specific questions without being distracted by other students.<br/><br/>
 
-    <bold>Your money sharply decreases.</bold>
-    You have to compensate your private tutor for your time, and at a relatively high price given their qualifications and because they are not teaching anybody else.
+    <bold>Your money stays the same.</bold>
+    Your parents pay for your private tutor, who comes at a relatively high price given their qualifications and the exclusivity.
     `,
     options: [
       {
@@ -297,7 +297,7 @@ const playerATextNodes = [
     <bold>Your time significantly decreases.</bold>
     You spend most of your evening doing homework, as the tutor also has to attend to other students.<br/><br/>
 
-    <bold>Your money decreases.</bold> 
+    <bold>Your money stays the same.</bold> 
     You have to pay the tuition centre for each session.
     `,
     options: [
@@ -312,12 +312,12 @@ const playerATextNodes = [
     text: `One of your best friends is celebrating their birthday this weekend. What do you plan to get them?`,
     options: [
       {
-        text: `A nice meal at their favourite restaurant, which you will make a reservation for.`,
+        text: `A nice meal at their favourite restaurant, which you can make an online reservation for.`,
         next: 6.1,
         updateState: { wealth: -80 },
       },
       {
-        text: `A video game they have been wanting to play for a long time.`,
+        text: `A video game they have been wanting to play for a long time, bought online.`,
         next: 6.2,
         updateState: { wealth: -60 },
       }
@@ -501,7 +501,7 @@ const playerBTextNodes = [
       {
         text: `Toast and butter.`,
         next: 2.1,
-        updateState: { time: -0.25, wealth: -15 },
+        updateState: { time: -0.25 },
       },
       {
         text: `Nothing - you’ll pick up a snack on the way to school.`,
@@ -515,7 +515,8 @@ const playerBTextNodes = [
     text: `<i>By making yourself toast and butter,</i><br/>
 
     <bold>Your time slightly decreases.</bold><br/>
-    <bold>Your money decreases.</bold>
+    <bold>Your money stays the same.</bold>
+    Your parents pay for groceries for the whole family.
     `,
     options: [
       {
@@ -544,13 +545,14 @@ const playerBTextNodes = [
     text: `It’s time to go to school. How do you do this?`,
     options: [
       {
-        text: `You take the school bus to school.`,
+        text: `You take the school bus to school, which is faster and you get to talk to your friends.`,
         next: 3.1,
-        updateState: { time: -0.5, wealth: -40 },
+        updateState: { time: -0.5 },
 
       },
       {
-        text: `You use a concession card to take the MRT and bus to school.`,
+        text: `You use a concession card to take the MRT and bus to school, which is slower but cheaper.
+        `,
         next: 3.2,
         updateState: { time: -0.75, wealth: -10 },
       }
@@ -563,7 +565,7 @@ const playerBTextNodes = [
     <bold>Your time decreases.</bold> 
     The school bus makes several stops to pick up all the students, so takes a little extra time.<br/><br/>
 
-    <bold>Your money decreases.</bold>
+    <bold>Your money stays the same.</bold>
     Your parents paid a fee to the bus chartering company in order to get you a seat on the school bus.    
     `,
     options: [
@@ -591,10 +593,10 @@ const playerBTextNodes = [
   },
   {
     id: 4,
-    text: `At school, you want to sign up for the orchestra CCA, but they require you to bring your own instrument. What do you do?`,
+    text: `At school, you want to sign up for the orchestra CCA, but they require you to bring your own instrument. Your parents are not able to afford this for you, so it will have to come from your own money. What do you do?`,
     options: [
       {
-        text: `Rent a violin from a shop near school.`,
+        text: `Rent a violin from a shop near school, to save money while you decide which violin to buy.`,
         next: 4.1,
         updateState: { time: -1, wealth: -40 },
       },
@@ -646,10 +648,10 @@ const playerBTextNodes = [
       {
         text: `You go to a tuition centre like most of the students in your class.`,
         next: 5.1,
-        updateState: { time: -3, wealth: -60 },
+        updateState: { time: -3 },
       },
       {
-        text: `You study for a few hours at a cafe.`,
+        text: `You study alone for an hour at a cafe, although you have to buy drinks and food to stay there.`,
         next: 5.2,
         updateState: { time: -1, wealth: -20 },
       }
@@ -662,8 +664,8 @@ const playerBTextNodes = [
     <bold>Your time significantly decreases.</bold>
     You spend most of your evening doing homework, as the tutor also has to attend to other students.<br/><br/>
 
-    <bold>Your money decreases.</bold> 
-    You have to pay the tuition centre for each session.
+    <bold>Your money stays the same.</bold> 
+    Your parents have to pay the tuition centre for each session.
     `,
     options: [
       {
@@ -692,7 +694,7 @@ const playerBTextNodes = [
     text: `One of your best friends is celebrating their birthday this weekend. What do you plan to get them?`,
     options: [
       {
-        text: `A video game they have been wanting to play for a long time.`,
+        text: `A video game they have been wanting to play for a long time, which you can buy online.`,
         next: 6.1,
         updateState: { wealth: -60 },
       },
@@ -857,7 +859,7 @@ const playerCTextNodes = [
     text: `It’s time to wake up and start the day. How do you do this?`,
     options: [
       {
-        text: `Your parents worked late last night, so you take care of morning chores by waking up at 6:00am.`,
+        text: `Your parents worked late last night, so you have to take care of morning chores by waking up at 6:00am.`,
         next: 1.1,
         updateState: { time: -1 }
       },
@@ -887,7 +889,7 @@ const playerCTextNodes = [
         updateState: { time: -1 },
       },
       {
-        text: `Subsidised meals at school.`,
+        text: `Subsidised meals at school, although you will have to get there early before they run out.`,
         next: 2.2,
         updateState: { wealth: -5, time: -0.25 },
       }
@@ -929,13 +931,13 @@ const playerCTextNodes = [
     text: `It’s time to go to school. How do you do this?`,
     options: [
       {
-        text: `You use a concession card to take the MRT and bus to school.`,
+        text: `You use a concession card to take the MRT and bus to school, which is faster although crowded.`,
         next: 3.1,
         updateState: { time: -0.75, wealth: -10 },
 
       },
       {
-        text: `You walk to school.`,
+        text: `You walk to school, as it does not cost a fee.`,
         next: 3.2,
         updateState: { time: -1.5 },
       }
@@ -975,7 +977,7 @@ const playerCTextNodes = [
     text: `At school, you want to sign up for the orchestra CCA, but they require you to bring your own instrument. What do you do?`,
     options: [
       {
-        text: `Reach out to a charity that donates used instruments to low-income students.`,
+        text: `Spend some time researching and reaching out to a charity that donates used instruments to low-income students.`,
         next: 4.1,
         updateState: { time: -2 },
       },
@@ -1022,12 +1024,12 @@ const playerCTextNodes = [
     text: `The school day is over and you need to spend some time catching up on homework. How do you solve this?`,
     options: [
       {
-        text: `Study at the local library.`,
+        text: `Study at the local library, although it will be packed with students at this hour.`,
         next: 5.1,
         updateState: { time: -1.5, wealth: -5 },
       },
       {
-        text: `Study at home.`,
+        text: `Study at home, although that may come with distractions.`,
         next: 5.2,
       }
     ]
@@ -1067,12 +1069,12 @@ const playerCTextNodes = [
     text: `You get home to discover that your grandparent is unwell and needs medication. What do you do?`,
     options: [
       {
-        text: `Take them to the clinic and pick up some medication from the pharmacy.`,
+        text: `Help them slowly walk to the clinic and pick up some medication from the pharmacy.`,
         next: 6.1,
         updateState: { time: -2, wealth: -50 },
       },
       {
-        text: `Fix the issue another day.`,
+        text: `Fix the issue another day and look after your siblings while your grandparent is sick.`,
         next: 6.2,
         updateState: { time: -3 },
       }
@@ -1163,12 +1165,12 @@ const playerCTextNodes = [
     text: `Bills have increased this month and your parents are working overtime to make ends meet. You need to find some dinner for yourself. What will you do?`,
     options: [
       {
-        text: `Pick up food from the hawker centre.`,
+        text: `Pick up food from the hawker centre, so you don’t have to spend time cooking.`,
         next: 8.1,
         updateState: { time: -0.25, wealth: -15 }
       },
       {
-        text: `Work a shift at a fast-food restaurant and bring home the leftovers.`,
+        text: `Work a shift at a fast-food restaurant and bring home the leftovers, so you don’t have to spend money on food.`,
         next: 8.2,
         updateState: { time: -2, wealth: 60 }
       }
@@ -1211,7 +1213,7 @@ const playerCTextNodes = [
     text: `You’re finally home. However, your laptop breaks down, meaning you can’t finish your remaining tasks. What do you do?`,
     options: [
       {
-        text: `Go back to the library and see if you can use one of their laptops for now.`,
+        text: `Go back to the library and see if you can use one of their laptops for now, as you cannot pay for repairs.`,
         next: 9.1,
         updateState: { time: -0.5 }
       },
