@@ -3,7 +3,7 @@ self.addEventListener("install", e => {
     e.waitUntil(
         caches.open("static").then(cache => {
             // return cache.addAll(["./", "./style.css", "./game.js"]);
-            return cache.addAll(["./assets/icons/favicon-32x32.png", "./assets/audio/bells-tibetan-daniel_simon.mp3", "./assets/images/backgroundv4.png"]);
+            return cache.addAll(["./assets/icons/favicon-32x32.png", "./assets/audio/bensound-jazzcomedy.mp3", "./assets/images/backgroundv4.png"]);
         })
     )
 })

@@ -1332,7 +1332,7 @@ const initAudioPlayer = function () {
   const soundOffBtn = document.getElementById("soundOffBtn");
   const audio = new Audio();
   audio.volume = 0.05;
-  audio.src = "assets/audio/bells-tibetan-daniel_simon.mp3";
+  audio.src = "assets/audio/bensound-jazzcomedy.mp3";
   audio.loop = true;
   audio.muted = true;
 
