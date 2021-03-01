@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
 /* setting up background */
 *,
 *::before,
@@ -28,6 +30,15 @@ body {
   height: 100vh;
   background: #fff7f3;
   color: #37393b;
+}
+
+/* font for the name of the game */
+.gameName {
+  font-family: "Fredoka One", cursive;
+}
+/* color for the middle name of the game */
+.gameNameMiddle {
+  color: #f64721;
 }
 
 /* header bar */

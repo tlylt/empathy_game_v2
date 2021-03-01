@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#01948e" />
-    <meta name="title" content="Empathy Game - Youth | Soristic" />
+    <meta name="title" content="In Their Shoes - Youth | Soristic" />
     <meta
       name="Description"
       property="og:description"
@@ -28,7 +28,7 @@
     />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Empathy Game - Youth | Soristic" />
+    <meta property="og:title" content="In Their Shoes - Youth | Soristic" />
     <meta
       property="og:description"
       content="Empathy game - Youth & Social Mobility, developed by Soristic"
@@ -61,7 +61,7 @@
     />
     <link rel="manifest" href="site.webmanifest" />
     <script defer src="game.js"></script>
-    <title>Empathy Game - Youth | Soristic</title>
+    <title>In Their Shoes - Youth | Soristic</title>
   </head>
   <body>
     <div class="grid-container">
@@ -143,7 +143,12 @@
             ;
             >Press 'Enter' to go fullscreen</span
           >
-          <h1>Welcome to Empathy Game:</h1>
+          <h1>
+            Welcome to
+            <span class="gameName"
+              >in <span class="gameNameMiddle gameName">their</span> shoes</span
+            >:
+          </h1>
           <h2>Youth and Social Mobility</h2>
           <button id="welcome-btn" class="btn next-btn">P L A Y</button>
         </div>
@@ -191,18 +196,18 @@
                   type="radio"
                   id="age1"
                   name="age"
-                  value=" < 11"
+                  value=" < 13"
                   required
                 />
-                <label for="age1"> < 11</label><br />
-                <input type="radio" id="age2" name="age" value="11 - 16" />
-                <label for="age2">11 - 16</label><br />
-                <input type="radio" id="age3" name="age" value="16 - 20" />
-                <label for="age3">16 - 20</label><br />
-                <input type="radio" id="age4" name="age" value="21 - 25" />
-                <label for="age4">21 - 25</label><br />
-                <input type="radio" id="age5" name="age" value=" > 25" />
-                <label for="age5"> > 25</label><br />
+                <label for="age1"> < 13</label><br />
+                <input type="radio" id="age2" name="age" value="13 - 18" />
+                <label for="age2">13 - 18</label><br />
+                <input type="radio" id="age3" name="age" value="19 - 25" />
+                <label for="age3">19 - 25</label><br />
+                <input type="radio" id="age4" name="age" value="26 - 35" />
+                <label for="age4">26 - 35</label><br />
+                <input type="radio" id="age5" name="age" value=" > 35" />
+                <label for="age5"> > 35</label><br />
                 <input type="radio" id="age6" name="age" value="undisclosed" />
                 <label for="age6">Prefer not to say</label><br />
                 <input
@@ -619,7 +624,10 @@
           </button>
         </div>
         <div style="text-align: center; user-select: none">
-          Empathy Game <br />Soristic
+          <span class="gameName"
+            >in <span class="gameNameMiddle gameName">their</span> shoes</span
+          >
+          <br /><img src="assets/images/soristic.png" style="max-width: 8em" />
         </div>
         <button id="soundOnBtn" class="hide" aria-label="sound on">
           <svg
