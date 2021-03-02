@@ -1377,14 +1377,16 @@ const creditElement = document.getElementById("credit");
 const creditBtnElement = document.getElementById("credit-btn");
 const credit1BtnElement = document.getElementById("credit1-btn");
 const end1Element = document.getElementById("end1");
-const end1BtnElement = document.getElementById("end1-btn");
+// const end1BtnElement = document.getElementById("end1-btn");
 const end4BtnElement = document.getElementById("end4-btn");
 const gameoverElement = document.getElementById("gameover");
-const gameoverBtnElement = document.getElementById("gameover-btn");
+// const gameoverBtnElement = document.getElementById("gameover-btn");
 const restartBtnElement = document.getElementById("restart-btn");
 const reselectElement = document.getElementById('reselect');
 const reselectBtnElement = document.getElementById('reselect-btn');
-
+const feedbackBtnElement = document.getElementById("feedback-btn");
+const feedbackSurveyElement = document.getElementById("feedbackSurvey");
+const feedbackSurveyBtnElement = document.getElementById("feedbackSurvey-btn");
 // button interactions
 welcomeBtnElement.onclick = () => {
   welcomeElement.classList.add("out");
@@ -1393,14 +1395,19 @@ welcomeBtnElement.onclick = () => {
 // surveyBtnElement.onclick = () => toggleHide(surveyElement, intro1Element);
 intro1BtnElement.onclick = () => toggleHide(intro1Element, intro2Element);
 intro2BtnElement.onclick = () => toggleHide(intro2Element, intro3Element);
-end1BtnElement.onclick = () => restart();
+// end1BtnElement.onclick = () => restart();
 creditBtnElement.onclick = () => toggleHide(end1Element, creditElement);
 credit1BtnElement.onclick = () => toggleHide(gameoverElement, creditElement);
 end4BtnElement.onclick = () => restart();
-gameoverBtnElement.onclick = () => {
-  toggleHide(gameoverElement);
+feedbackBtnElement.onclick = () => toggleHide(creditElement, feedbackSurveyElement);
+feedbackSurveyBtnElement.onclick = () => {
+  toggleHide(feedbackSurveyElement);
   restart();
 };
+// gameoverBtnElement.onclick = () => {
+//   toggleHide(gameoverElement);
+//   restart();
+// };
 
 restartBtnElement.onclick = () => {
   toggleHideWithoutIn(currProfile);

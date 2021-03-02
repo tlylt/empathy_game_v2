@@ -229,6 +229,7 @@ body {
   background-color: #ef8f65;
   color: #37393b;
   box-shadow: none;
+  border-radius: 3px;
 }
 
 /* sound buttons */

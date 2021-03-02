@@ -85,7 +85,10 @@
             return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
         }).join('&');
         xhr.send(encoded);
-        toggleHide(surveyElement, intro1Element);
+        if (data["enjoyable"] == undefined) {
+            toggleHide(surveyElement, intro1Element); // first form
+        }
+
     }
 
     function loaded() {

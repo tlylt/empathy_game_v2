@@ -473,8 +473,8 @@
           class="options img-end3"
           style="display: flex; flex-direction: column; align-items: center"
         >
-          <button id="end1-btn" class="btn again-btn">Play Again</button>
-          <button id="credit-btn" class="btn credit-btn">END</button>
+          <!-- <button id="end1-btn" class="btn again-btn">Play Again</button> -->
+          <button id="credit-btn" class="btn credit-btn">Next</button>
         </div>
       </div>
       <div id="credit" class="content hide">
@@ -515,7 +515,7 @@
               <polyline points="3 7 12 13 21 7" />
             </svg>
             <a
-              href="mailto:connect@soristic.asia?subject=Empathy Game (Youth) Feedback"
+              href="mailto:connect@soristic.asia?subject=In Their Shoes Game (Youth) Feedback"
               >Share your thoughts with us</a
             >
           </div>
@@ -525,6 +525,9 @@
           style="align-items: center; flex-direction: column"
         >
           <button id="end4-btn" class="btn again-btn">Play Again</button>
+          <button id="feedback-btn" class="btn credit-btn">
+            Feedback form
+          </button>
         </div>
       </div>
       <div id="gameover" class="content hide">
@@ -585,8 +588,8 @@
           class="options img-cred1"
           style="display: flex; flex-direction: column; align-items: center"
         >
-          <button id="gameover-btn" class="btn again-btn">Play Again</button>
-          <button id="credit1-btn" class="btn credit-btn">END</button>
+          <!-- <button id="gameover-btn" class="btn again-btn">Play Again</button> -->
+          <button id="credit1-btn" class="btn credit-btn">Next</button>
         </div>
       </div>
       <!-- end content -->
@@ -611,7 +614,186 @@
           </button>
         </div>
       </div>
+      <div id="feedbackSurvey" class="content hide">
+        <div class="text" style="text-align: center">
+          <h2 style="overflow: initial">We want your feedback!</h2>
+          <form
+            class="gform"
+            style="overflow-y: scroll"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbzonx1qyL7Qzy32CRVOxCwh6ZonYkXrwd9BnYgG2y5cQaTymFfqUy1I/exec"
+          >
+            <div class="form-elements">
+              <div style="width: min-content; margin: auto; text-align: start">
+                <p>How enjoyable was the game?</p>
+                <input
+                  type="radio"
+                  id="very_enjoyable"
+                  name="enjoyable"
+                  value="very enjoyable"
+                  required
+                />
+                <label for="very_enjoyable">Very enjoyable</label><br />
+                <input
+                  type="radio"
+                  id="enjoyable"
+                  name="enjoyable"
+                  value="enjoyable"
+                />
+                <label for="enjoyable">Enjoyable</label><br />
+                <input
+                  type="radio"
+                  id="average"
+                  name="enjoyable"
+                  value="average"
+                /><label for="average"> Average</label><br />
+                <input
+                  type="radio"
+                  id="not_enjoyable"
+                  name="enjoyable"
+                  value="not enjoyable"
+                />
+                <label for="not_enjoyable">Not enjoyable</label><br />
+                <input
+                  type="radio"
+                  id="not_at_all_enjoyable"
+                  name="enjoyable"
+                  value="not at all enjoyable"
+                />
+                <label for="not_at_all_enjoyable">Not at all enjoyable</label
+                ><br />
+                <p>How difficult was the game?</p>
+                <input
+                  type="radio"
+                  id="very_difficult"
+                  name="difficult"
+                  value="very difficult"
+                  required
+                />
+                <label for="very_difficult">Very difficult</label><br />
+                <input
+                  type="radio"
+                  id="difficult"
+                  name="difficult"
+                  value="difficult"
+                />
+                <label for="difficult">Difficult</label><br />
+                <input
+                  type="radio"
+                  id="average"
+                  name="difficult"
+                  value="average"
+                /><label for="average"> Average</label><br />
+                <input
+                  type="radio"
+                  id="not_difficult"
+                  name="difficult"
+                  value="not difficult"
+                />
+                <label for="not_difficult">Not difficult</label><br />
+                <input
+                  type="radio"
+                  id="not_at_all_difficult"
+                  name="difficult"
+                  value="not at all difficult"
+                />
+                <label for="not_at_all_difficult">Not at all difficult</label
+                ><br />
+                <p>Who was your favourite character?</p>
+                <input
+                  type="radio"
+                  id="arthur"
+                  name="favourite"
+                  value="arthur"
+                  required
+                />
+                <label for="arthur">Arthur</label><br />
+                <input
+                  type="radio"
+                  id="belinda"
+                  name="favourite"
+                  value="belinda"
+                />
+                <label for="belinda">Belinda</label><br />
+                <input
+                  type="radio"
+                  id="curtis"
+                  name="favourite"
+                  value="curtis"
+                /><label for="curtis"> Curtis</label><br />
+                <p>Who was your least favourite character?</p>
+                <input
+                  type="radio"
+                  id="arthur"
+                  name="least_favourite"
+                  value="arthur"
+                  required
+                />
+                <label for="arthur">Arthur</label><br />
+                <input
+                  type="radio"
+                  id="belinda"
+                  name="least_favourite"
+                  value="belinda"
+                />
+                <label for="belinda">Belinda</label><br />
+                <input
+                  type="radio"
+                  id="curtis"
+                  name="least_favourite"
+                  value="curtis"
+                /><label for="curtis"> Curtis</label><br />
+                <!-- hidden inputs below -->
+                <input
+                  type="text"
+                  style="display: none"
+                  name="game"
+                  value="youth"
+                />
+                <fieldset
+                  class="pure-group honeypot-field"
+                  style="visibility: hidden; height: 0px"
+                >
+                  <label for="honeypot"
+                    >To help avoid spam, utilize a Honeypot technique with a
+                    hidden text field; must be empty to submit the form!
+                    Otherwise, we assume the user is a spam bot.</label
+                  >
+                  <input id="honeypot" type="text" name="honeypot" value="" />
+                </fieldset>
+              </div>
 
+              <div class="options" style="display: grid; justify-items: center">
+                <button id="feedbackSurvey-btn" class="btn next-btn">
+                  Submit
+                </button>
+                <div style="display: flex; align-items: center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-mail"
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#000000"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <polyline points="3 7 12 13 21 7" />
+                  </svg>
+                  <a
+                    href="mailto:connect@soristic.asia?subject=In Their Shoes Game (Youth) Feedback"
+                    >Share your thoughts with us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
       <!-- footer bar -->
       <div id="footer" class="footer">
         <div>
